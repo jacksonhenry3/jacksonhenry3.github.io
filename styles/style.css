@@ -1,0 +1,151 @@
+body
+{
+	background-color: white;
+	margin:0px;
+	padding: 0px;
+}
+
+#content
+{
+	min-height: 100%;
+	padding: 40px;
+	box-shadow: 0 0 10px #222;
+	background-color: rgb(245,245,245);
+	text-align:center;
+}
+
+
+/*----------top_nav-------*/
+	.top_nav
+	{
+
+		margin:0px auto;
+		height:45px; /*height of text +margin+border*/
+	}
+	.top_nav ul
+	{
+		width:100%;
+	}
+
+	.top_nav li
+	{
+		color:#111;
+		position:relative;
+		left:-40px;
+		float:left;
+		text-align: center;
+		width:25%;
+		font-family: 'Raleway', sans-serif;
+		list-style-type: none;
+		margin-left:0%;
+		font-size: 27px;
+		border-top: 3px solid rgba(0,0,0,0);
+		padding-top:5px;
+		padding-bottom: 5px;
+		transition:border-top-color .4s;
+		border-right:1% solid black;
+	}
+	#home:hover
+	{
+		border-top-color: red;
+	}
+	#science:hover
+	{
+		border-top-color: orange;
+	}
+	#art:hover
+	{
+		border-top-color: yellow;
+	}
+	#code:hover
+	{
+		border-top-color: green;
+	}
+
+/*----------card----------*/
+	.card
+	{
+		font-family: 'Raleway', sans-serif;
+
+		margin:10px;
+		display: inline-block;
+		background-color: #FFF;
+		padding: 17px 20px 15px;
+		border: 1px solid #d8d8d8;
+		border-top:5px solid #f9b256;
+		border-bottom:2px solid #d8d8d8;
+		border-radius: 3px;
+		text-align: left;
+	}
+
+	.card ul 
+	{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.card li 
+	{
+		font:  15px/1.5;
+		border-bottom: 1px solid #dadada;
+		display: block;
+
+
+		-webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+		-moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+		-o-transition: font-size 0.3s ease, background-color 0.3s ease;
+		-ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+		transition: font-size 0.3s ease, background-color 0.3s ease;
+	}
+
+	.card li:last-child 
+	{
+		border: none;
+	}
+
+	.card li a
+	{
+		text-decoration: none;
+		color: #000;
+		display: block;
+	}
+
+	.card li:hover 
+	{
+		background: #f6f6f6;
+	}
+
+	.card .section_title
+	{
+		color: #222;
+		display: inline-block;
+		font-family: 'Raleway', sans-serif;
+		font-size: 25px;
+		
+
+	}
+
+
+	.subcatagory
+	{
+		color: #262626;
+		padding-top: 10px;
+		font-family: 'Raleway', sans-serif;
+		font-size: 16px;
+		
+		line-height:40px;
+		border-bottom: 1px solid #aaa;
+		margin-bottom: 12px;
+		font-weight: bold;
+	}
+
+	.card p
+	{
+		font-size: medium;
+		font-family: 'Roboto Slab', serif;
+	}
+	.acomplishments
+	{
+		font-size: 18px;
+	}
