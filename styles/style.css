@@ -4,14 +4,29 @@ body
 	margin:0px;
 	padding: 0px;
 }
+/*<div style = "font-size:100px;font-family: 'Raleway', sans-serif;">&#8592</div> back arrow */
 
 #content
 {
-	min-height: 100%;
+	
 	padding: 40px;
 	box-shadow: 0 0 10px #222;
-	background-color: rgb(245,245,245);
+	background-color: rgb(240,240,240);
 	text-align:center;
+}
+
+a
+{
+	text-decoration: none;
+	color: #000;
+	border-bottom: 1px solid rgba(0,0,255,.35);
+	transition: border-bottom .4s;
+
+}
+
+a:hover
+{
+	border-bottom: 1px solid blue;
 }
 
 
@@ -44,6 +59,7 @@ body
 		padding-bottom: 5px;
 		transition:border-top-color .4s;
 		border-right:1% solid black;
+		border-radius: 1px 1px 0px 0px
 	}
 	#home:hover
 	{
@@ -72,7 +88,7 @@ body
 		background-color: #FFF;
 		padding: 17px 20px 15px;
 		border: 1px solid #d8d8d8;
-		border-top:5px solid #f9b256;
+		border-top:4px solid #f9b256;
 		border-bottom:2px solid #d8d8d8;
 		border-radius: 3px;
 		text-align: left;
@@ -88,6 +104,7 @@ body
 	.card li 
 	{
 		font:  15px/1.5;
+		font-family: 'Roboto Slab', serif;
 		border-bottom: 1px solid #dadada;
 		display: block;
 
@@ -108,7 +125,7 @@ body
 	{
 		text-decoration: none;
 		color: #000;
-		display: block;
+		display: inline;
 	}
 
 	.card li:hover 
@@ -144,8 +161,83 @@ body
 	{
 		font-size: medium;
 		font-family: 'Roboto Slab', serif;
+
 	}
 	.acomplishments
 	{
 		font-size: 18px;
 	}
+
+
+/*--------------talk bubble--------*/
+	#talkbubble 
+	{
+		
+		font-family: 'Raleway', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		font-weight:600;
+		
+		background-color:white;
+		padding:10px;
+		width: 300px;
+		top:220px;
+		position:absolute;
+
+		border:1px solid #d8d8d8;
+		border-bottom:2px solid #d8d8d8;
+		border-top:4px solid rgb(50,50,150);
+		-moz-border-radius:    3px;
+		-webkit-border-radius: 3px;
+		border-radius:         3px;
+	}
+
+	#talkbubble p 
+	{
+		font-size: 14px;
+		font-family: 'Roboto Slab', serif;
+
+	}
+	#talkbubble:before {
+	   content:"";
+	   position: absolute;
+	   right: 30%;
+	   top: -21px;
+	   width: 0;
+	   height: 0;
+	   border-left: 0px solid transparent;
+	   border-bottom: 21px solid rgb(50,50,150);;
+	   border-right: 32px solid transparent;
+	}
+
+	#me_speeking
+	{
+		display: inline-block;
+		width:330px;
+		height:355px;
+		position: relative;
+	}
+/*--------button--------*/
+	.button
+	{
+		text-decoration: none;
+		color:white;
+		text-shadow:0 1px 1px rgba(20,20,20,.3);
+		text-align:center;
+		padding-left:30px;
+		padding-right:30px;
+		padding-bottom:10px;
+		padding-top:10px;
+		background-color:#D84937;
+		border-radius:4px;
+		font-weight:900;
+		border:2px solid rgba(0,0,0,0);
+		transition:border .35s;
+		margin:20px;
+		border-bottom: 0px solid rgba(0,0,255,.35);
+	}
+	.button:hover
+	{
+		border:2px solid rgba(0,0,0,.5);
+	}
+	

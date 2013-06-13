@@ -8,11 +8,25 @@
 	{
 		border-top-color: red;
 		z-index: 100;
-		background-color: rgb(245,245,245);
+		background-color: rgb(240,240,240);
 		box-shadow:0 -4px 4px #222;
 	}
-</style>
+
+	.me
+	{
+		float:left;
+		border-radius: 100px;
+ 		box-shadow: 0 0 40px #222 inset;
+ 		overflow:hidden;
+ 		width:200px;
+ 		height:200px;
+ 		background-image: url('media/me.jpg')
+	}
+
+	</style>
 <body>
+
+
 
 	<div class = "top_nav">
 		<ul>
@@ -23,7 +37,17 @@
 		</ul>
 	</div>
 
+	
+
 	<div id = 'content'>
+		<div id = 'me_speeking'>
+			<div class = 'me'>
+			</div>
+			<div id = 'talkbubble'>
+	  			Hi! I'm Jackson, welcome to my showcase. Have a look arround!
+	  			<p>if you have any suggestions or comments feel free to let me know.</p>
+			</div>
+		</div>
 		<div class = 'card'>
 				<div class = 'section_title'>Contact Information</div>
 				<div class = 'subcatagory'>Email</div>
@@ -56,13 +80,25 @@
 					</li>
 				</ul>
 				</div>
-			</div>
+		</div>
 
-			<div class = 'card' style = 'border-top-color:green;width:400px;'>
+		<div class = 'card' style = 'border-top-color:green;width:400px;'>
 				<div class = 'section_title'>Introduction</div>
 				<div class = 'subcatagory'>About Me</div>
-				<p>I'm Jackson, I just finished my first year as a physics student at RIT. I absolutely love physics, particularly the high energy particle variety. I'm so far away from being able to study it but I'm working my way up there. In my free time I love to program, do more science, dance and juggle. I also really enjoy doing art of a few different varieties, mostly drawing and photography. I never get to do it much but whenever I do I wish i did it more. I'll be using this website mostly to share my own programming, art work and science but also to talk about interesting things I find in science, programming and philosophy. I also made this website from scratch. Everything on this site is 100% home grown original content, the pictures,the code, the webpage itself.</p>
-			</div>		
+				<p>I'm Jackson, I just finished my first year as a physics student at RIT. I absolutely love physics, particularly the high energy particle variety. In my free time I love to program, do more science, dance and juggle. I also really enjoy doing art of a few different varieties, mostly drawing and photography. I made this website from scratch. Everything on this site is 100% home grown original content, the pictures,the code, the webpage itself. If you want to use any of it, get in touch with me.</p>
+			</div>
+		<div class = 'card' style = 'border-top-color:teal;'>
+			<div class = 'section_title'>Resume/CV</div>
+			<div class = 'subcatagory'>Overview</div>
+			<ul>
+				<li>Programming experience in python,javascript,mathematica, and matlab.</li>
+				<li>Consultant at the <a href = 'http://www.concord.org'>Concord Consortium</a></li>
+				<li>Interned with the Umass gravitaional wave group</li>
+				<li>currently studying physics at <a href = 'http://www.rit.edu/physics'>RIT</a>, where I made deans list</li>
+				<li> graduated from <a href = "#">Amherst Regional High School</a></li>
+			</ul>
+			<a class = 'button'href = '#'>Full Resume</a>
+		</div>
 	</div>
 
 </body>
