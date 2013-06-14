@@ -71,11 +71,11 @@ a:hover
 	}
 	#art:hover
 	{
-		border-top-color: yellow;
+		border-top-color: #F6E527;
 	}
 	#code:hover
 	{
-		border-top-color: green;
+		border-top-color: #3F9E5C;
 	}
 
 /*----------card----------*/
