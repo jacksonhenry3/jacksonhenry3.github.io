@@ -63,7 +63,7 @@ a:hover
 	}
 	#home:hover
 	{
-		border-top-color: red;
+		border-top-color: #D84937;/*redish*/
 	}
 	#science:hover
 	{
@@ -168,9 +168,8 @@ a:hover
 		font-size: 18px;
 	}
 
-
-/*--------------talk bubble--------*/
-	#talkbubble 
+/*-------talk bubble------*/
+	.talkbubble 
 	{
 		
 		font-family: 'Raleway', sans-serif;
@@ -192,13 +191,13 @@ a:hover
 		border-radius:         3px;
 	}
 
-	#talkbubble p 
+	.talkbubble p 
 	{
 		font-size: 14px;
 		font-family: 'Roboto Slab', serif;
 
 	}
-	#talkbubble:before {
+	.talkbubble:before {
 	   content:"";
 	   position: absolute;
 	   right: 30%;
@@ -210,16 +209,18 @@ a:hover
 	   border-right: 32px solid transparent;
 	}
 
-	#me_speeking
+	.person_speeking
 	{
 		display: inline-block;
 		width:330px;
 		height:355px;
 		position: relative;
 	}
-/*--------button--------*/
+
+/*---------button---------*/
 	.button
 	{
+		display:inline-block;
 		text-decoration: none;
 		color:white;
 		text-shadow:0 1px 1px rgba(20,20,20,.3);
@@ -234,7 +235,7 @@ a:hover
 		border:2px solid rgba(0,0,0,0);
 		transition:border .35s;
 		margin:20px;
-		border-bottom: 0px solid rgba(0,0,255,.35);
+		
 	}
 	.button:hover
 	{
