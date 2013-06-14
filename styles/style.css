@@ -1,11 +1,12 @@
+
 body
 {
+	position:relative;
+	top:-16px;
 	background-color: white;
 	margin:0px;
-	padding: 0px;
-}
-/*<div style = "font-size:100px;font-family: 'Raleway', sans-serif;">&#8592</div> back arrow */
 
+}
 #content
 {
 	
@@ -33,7 +34,6 @@ a:hover
 /*----------top_nav-------*/
 	.top_nav
 	{
-
 		margin:0px auto;
 		height:45px; /*height of text +margin+border*/
 	}
@@ -58,7 +58,6 @@ a:hover
 		padding-top:5px;
 		padding-bottom: 5px;
 		transition:border-top-color .4s;
-		border-right:1% solid black;
 		border-radius: 1px 1px 0px 0px
 	}
 	#home:hover

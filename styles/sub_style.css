@@ -168,3 +168,18 @@ hr
  		height:200px;
  		background-image: url('../home/media/me.jpg')
 	}
+/*-----------back-----------*/
+	#back
+	{
+		z-index:100;
+		float: left;
+		position:fixed;
+		top:300px;
+		font-size: 150px;
+
+	}
+
+	#back a 
+	{
+		border-bottom: 0px solid black;
+	}
