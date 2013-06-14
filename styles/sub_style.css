@@ -27,7 +27,19 @@ body
 	padding-top:20px;
 	text-align: center;
 }
+a
+{
+	text-decoration: none;
+	color: #000;
+	border-bottom: 1px solid rgba(0,0,255,.35);
+	transition: border-bottom .4s;
 
+}
+
+a:hover
+{
+	border-bottom: 1px solid blue;
+}
 h2,h3,h4,h5
 {
 	font-family: 'Homenaje', sans-serif;
@@ -83,6 +95,8 @@ h5
 
 p
 {
+	padding-left: 50px;
+	padding-right:50px;
 	text-align: left;
 	font-family: 'Roboto Slab', serif;
 }
@@ -93,3 +107,64 @@ hr
 	background-color: #222;
 	height: 5px;
 }
+
+/*-------talk bubble------*/
+	.talkbubble 
+	{
+		
+		font-family: 'Raleway', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		font-weight:600;
+		
+		background-color:white;
+		padding:10px;
+		width: 300px;
+		top:240px;
+		position:absolute;
+
+		border:1px solid #d8d8d8;
+		border-bottom:2px solid #d8d8d8;
+		border-top:4px solid rgb(50,50,150);
+		-moz-border-radius:    3px;
+		-webkit-border-radius: 3px;
+		border-radius:         3px;
+	}
+
+	.talkbubble p 
+	{
+		font-size: 14px;
+		font-family: 'Roboto Slab', serif;
+
+	}
+	.talkbubble:before {
+	   content:"";
+	   position: absolute;
+	   right: 30%;
+	   top: -21px;
+	   width: 0;
+	   height: 0;
+	   border-left: 0px solid transparent;
+	   border-bottom: 21px solid rgb(50,50,150);
+	   border-right: 32px solid transparent;
+	}
+
+	.person_speeking
+	{
+		padding-left:12px;
+		display: inline-block;
+		width:330px;
+		height:355px;
+		position: relative;
+	}
+		.person
+	{
+		margin-top:20px;
+		float:left;
+		border-radius: 100px;
+ 		box-shadow: 0 0 40px #222 inset;
+ 		overflow:hidden;
+ 		width:200px;
+ 		height:200px;
+ 		background-image: url('../home/media/me.jpg')
+	}

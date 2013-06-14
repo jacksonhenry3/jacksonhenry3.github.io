@@ -180,7 +180,7 @@ a:hover
 		background-color:white;
 		padding:10px;
 		width: 300px;
-		top:220px;
+		top:240px;
 		position:absolute;
 
 		border:1px solid #d8d8d8;
@@ -205,16 +205,28 @@ a:hover
 	   width: 0;
 	   height: 0;
 	   border-left: 0px solid transparent;
-	   border-bottom: 21px solid rgb(50,50,150);;
+	   border-bottom: 21px solid rgb(50,50,150);
 	   border-right: 32px solid transparent;
 	}
 
 	.person_speeking
 	{
+		padding-left:12px;
 		display: inline-block;
 		width:330px;
 		height:355px;
 		position: relative;
+	}
+		.person
+	{
+		margin-top:20px;
+		float:left;
+		border-radius: 100px;
+ 		box-shadow: 0 0 40px #222 inset;
+ 		overflow:hidden;
+ 		width:200px;
+ 		height:200px;
+ 		background-image: url('../home/media/me.jpg')
 	}
 
 /*---------button---------*/
@@ -241,4 +253,3 @@ a:hover
 	{
 		border:2px solid rgba(0,0,0,.5);
 	}
-	
