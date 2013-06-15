@@ -40,20 +40,38 @@ a:hover
 {
 	border-bottom: 1px solid blue;
 }
-h2,h3,h4,h5
+
+h1,h2,h3
 {
 	font-family: 'Homenaje', sans-serif;
 	font-size: 40px;
 }
-h4
+h2
 {
 	font-size: 25px;
 }
-h5
+h3
 {
 	font-size: 20px;
 }
 
+p
+{
+	padding-left: 50px;
+	padding-right:50px;
+	text-align: left;
+	font-family: 'Roboto Slab', serif;
+}
+
+
+hr
+{
+	background-color: #222;
+	height: 3px;
+	border:0px;
+}
+
+/*------list-------------*/
 	ul 
 	{
 		list-style-type: none;
@@ -92,22 +110,6 @@ h5
 	{
 		background: #DDD;
 	}
-
-p
-{
-	padding-left: 50px;
-	padding-right:50px;
-	text-align: left;
-	font-family: 'Roboto Slab', serif;
-}
-
-
-hr
-{
-	background-color: #222;
-	height: 5px;
-}
-
 /*-------talk bubble------*/
 	.talkbubble 
 	{
@@ -157,7 +159,7 @@ hr
 		height:355px;
 		position: relative;
 	}
-		.person
+	.person
 	{
 		margin-top:20px;
 		float:left;
@@ -175,7 +177,7 @@ hr
 		float: left;
 		position:fixed;
 		top:300px;
-		font-size: 150px;
+		font-size: 100px;
 
 	}
 

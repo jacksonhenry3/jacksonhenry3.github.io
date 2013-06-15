@@ -22,6 +22,7 @@ a
 	color: #000;
 	border-bottom: 1px solid rgba(0,0,255,.35);
 	transition: border-bottom .4s;
+	cursor: pointer; 
 
 }
 
@@ -165,6 +166,11 @@ a:hover
 	.acomplishments
 	{
 		font-size: 18px;
+	}
+
+	.card img 
+	{
+		margin-top:20px;
 	}
 
 /*-------talk bubble------*/
