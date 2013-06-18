@@ -64,10 +64,10 @@
                         .attr(     "width"           ,  width)
                         .attr(     "height"          ,  height)
                         .style(    "background-color",  '#CCC')
-                        //begin the animation when the page loads
+                        //begin the animation when the page ldown
                         .on(       "load"            ,  init)
                         //add more balls when the mouse is moved on the svg
-                        .on(       "mousemove"       ,  add_data)
+                        .on(       "mousedown"       ,  add_data)
 
                         //function to switch between click and mousemove (NOT WORKING)
                         /*.on(
@@ -169,21 +169,22 @@
                                 d["x"]          = x+x_velocity*t_step
                                 d["x_velocity"] = x_velocity
 
+                                //not working
                                 if (y+radius>height){
-                                    d["x_velocity"] = -.5*x_velocity         
+                                    d["x_velocity"] = -.9*x_velocity         
                                 }
 
 
                                 //if the ball hit's either the left or right wall reverse its velocity and cheange its position to inside the svg
                                 if (x+radius>width)
                                 {
-                                    d["x_velocity"] = -.1*x_velocity   
+                                    d["x_velocity"] = -.9*x_velocity   
                                     d["x"] = width-radius       
                                     
                                 }
                                 else if (x+radius<0)
                                 {
-                                    d["x_velocity"] = -.1*x_velocity
+                                    d["x_velocity"] = -.9*x_velocity
                                     d["x"] = radius
                                 }
 
