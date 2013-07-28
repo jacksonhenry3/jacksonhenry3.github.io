@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+		<title></title>
+		<style type="text/css">
+		body
+		{
+			background-color: black;
+		}
+		#code_disp,#hint
+		{
+			font-family: 'Source Code Pro', sans-serif;
+			font-size: 20px;
+			background-color:black;
+			color:rgb(0,255,0);
+			padding-top:200px;
+			width:80%;
+			margin:0px auto;
+		}
+		#hint
+		{
+			padding: 0px;
+			font-size: 50px;
+			font-family: 'Source Code Pro', sans-serif;
+		}
+		</style>
+	</head>
+	<body>
+		<div id = 'hint'>Think <em>outside</em> the webpage</div>
+		<div id = 'code_disp'></div>
+	</body>
+	<script type="text/javascript">
+		disp = document.getElementById('code_disp')
+		message = 'hello steven, i have been a bit lazy but finally here is your first code challenge! you may use whatever means you would like to decrypt it. Anyway, i would like to propose a karaoke night the evening of friday the shit. There is no more free fridays in my break. Maybe a weekday then? how about a tuesday? good luck decrypting!'
+		all_chars = 'qwertyuiopasdfghjlkzxcvbnm'
+		function randomize () {
+			message = 'hello steven, i have been a bit lazy but finally here is your first code challenge! you may use whatever means you would like to decrypt it. Anyway, i would like to propose a karaoke night the evening of friday the shit. There is no more free fridays in my break. Maybe a weekday then? how about a tuesday? good luck decrypting! your turn!'
+
+		for (var i = all_chars.length - 1; i >= 0; i--) {
+
+			n = all_chars[i]
+			console.log(n)
+			//setTimeout(function(){
+			for (var j = 0; j < 20; j++) {
+				message = message.replace(n,all_chars[Math.round(Math.random()*all_chars.length)])
+			};
+			disp.innerHTML = message
+			//},1);
+		};
+		console.log(message)
+		
+	}
+	
+	setInterval(function(){randomize()},75);
+	</script>
+</html>
