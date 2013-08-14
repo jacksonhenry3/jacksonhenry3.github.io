@@ -3,13 +3,18 @@ body
 	margin: 0px;
 	font-family: 'Muli', sans-serif;
 	color:#222;
-	background-color: #4CC6DE;
 }
 h1
 {
 	color:#0091A8;
-	font-size: 40px;
+	font-size: 60px;
+	font-weight: normal;
 	font-family: 'Sue Ellen Francisco', cursive;
+}
+
+#content h1
+{
+	line-height: 70%;
 }
 #header
 {
