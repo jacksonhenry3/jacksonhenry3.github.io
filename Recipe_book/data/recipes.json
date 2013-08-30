@@ -83,5 +83,46 @@
             "Very thin pancakes (almost like crepes) they cook really quickly."
         ],
         "image": "data/images/sweedish_pancakes.JPG"
+    },
+    "sesame chicken": {
+        "ingredients": [
+            "1/4 cup wheet germ",
+            "2 cups flower",
+            "3 heaping table spoons plain yogurt",
+            "2-3 eggs",
+            "salt to taste",
+            "low fat milk, enough to mkae a thin batter"
+        ],
+        "instructions": [
+            "Mix all ingredients",
+            "Cook over high heat in margerine",
+            "Very thin pancakes (almost like crepes) they cook really quickly."
+        ],
+        "image": ""
+    },
+    "Asian noodle salad": {
+        "ingredients": [
+            "8-12 oz curly chinese egg noddles",
+            "2 table spoons tamri",
+            "1 table spoon rice wine vinegar",
+            "1 table spoon sugar",
+            "1 teaspoon hot pepper oil",
+            "1 table spoon marin (rice wine)",
+            "3 cloves garlic",
+            "1 fuckton ginger",
+            "carrots",
+            "peas",
+            "broccoli",
+            "5 chopped scallions",
+            "3 tablespoons black sesame seeds"
+        ],
+        "instructions": [
+            "cook egg noodles acording to package instructions",
+            "pick vegis you want and slice thin and long",
+            "steam vegis to taste",
+            "mix all other ingredients and stir together",
+            "pour sauce over noodles, then add vegis and sesame seeds. finally top with scallions"
+        ],
+        "image": ""
     }
 }
