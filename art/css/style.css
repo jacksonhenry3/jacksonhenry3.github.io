@@ -6,7 +6,7 @@
 
 body{
   background-color: red;
-  background: url('paper_fibers.png');
+  background: url('../paper_fibers.png');
 }
 
 #side_bar{
