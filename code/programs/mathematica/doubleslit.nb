@@ -1,0 +1,236 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      8321,        227]
+NotebookOptionsPosition[      7969,        210]
+NotebookOutlinePosition[      8346,        226]
+CellTagsIndexPosition[      8303,        223]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", ".0005"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lambda", " ", "=", " ", 
+   RowBox[{"7.50", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "7"}], ")"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"B", " ", "=", " ", 
+   RowBox[{"Pi", "*", "a", "*", 
+    RowBox[{
+     RowBox[{"Sin", "[", "theta", "]"}], "/", "lambda"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SingleLimit", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"Pi", "*", "a", "*", 
+        RowBox[{
+         RowBox[{"Sin", "[", "theta", "]"}], "/", "lambda"}]}], "]"}], ")"}], 
+     "^", "2"}], "/", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Pi", "*", "a", "*", 
+       RowBox[{
+        RowBox[{"Sin", "[", "theta", "]"}], "/", "lambda"}]}], ")"}], "^", 
+     "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"d", "=", ".002"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Ideal", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Cos", "[", 
+     RowBox[{"Pi", "*", "d", "*", 
+      RowBox[{
+       RowBox[{"Sin", "[", "theta", "]"}], "/", "lambda"}]}], "]"}], "^", 
+    "2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Cos", "[", 
+         RowBox[{"Pi", "*", "seperation", "*", 
+          RowBox[{
+           RowBox[{"Sin", "[", "theta", "]"}], "/", "lambda"}]}], "]"}], "^", 
+        "2"}], ")"}], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"Pi", "*", "width", "*", 
+            RowBox[{
+             RowBox[{"Sin", "[", "theta", "]"}], "/", "lambda"}]}], "]"}], 
+          ")"}], "^", "2"}], "/", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"Pi", "*", "width", "*", 
+           RowBox[{
+            RowBox[{"Sin", "[", "theta", "]"}], "/", "lambda"}]}], ")"}], "^",
+          "2"}]}], ")"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"theta", ",", 
+       RowBox[{
+        RowBox[{"-", "Pi"}], "/", "1000"}], ",", 
+       RowBox[{"Pi", "/", "1000"}]}], "}"}], ",", 
+     RowBox[{"MaxRecursion", " ", "\[Rule]", " ", "10"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", 
+          RowBox[{"Hue", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"7.50", "*", 
+               RowBox[{"10", "^", 
+                RowBox[{"(", 
+                 RowBox[{"-", "7"}], ")"}]}]}], ")"}], "/", "lambda"}], "-", 
+            "1"}], "]"}]}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", 
+          RowBox[{"Hue", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"7.50", "*", 
+               RowBox[{"10", "^", 
+                RowBox[{"(", 
+                 RowBox[{"-", "7"}], ")"}]}]}], ")"}], "/", "lambda"}], "-", 
+            "1"}], "]"}]}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"lambda", ",", 
+     RowBox[{"7.50", "*", 
+      RowBox[{"10", "^", 
+       RowBox[{"(", 
+        RowBox[{"-", "7"}], ")"}]}]}], ",", 
+     RowBox[{"3.80", "*", 
+      RowBox[{"10", "^", 
+       RowBox[{"(", 
+        RowBox[{"-", "7"}], ")"}]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"seperation", ",", ".001", ",", ".003"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"width", ",", ".0001", ",", ".001"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwdylkowwEAx/El5IE5Sqa0OUauF/K2+muMpjZpf5KraWVJW8wxKyxRm2OW
+MS0vmxwvyxwlMWnF1GJFitQWJjaN2gohlP9vD98+L98sSbeoI4pGo7Go4OqW
+iiQnglzfycc4bPU8T0G+JxSxYTDRCPWjdBPkeic3oNIWtsNb16YLEqKDMxhz
+O3MOzb/z15D31v4KuwLCMHzO8X1CR4Uuvp7Sb79LhfQBQxp06bxMuOt+Z0Fr
+r0HaRCkQJsthneaqBxJ6SS/cq80bhNmxXyooZ34Pw7lioRba/zKnYVV5iw4+
+3TVaoGlxzAp9ucVHkW9NegKDBgGtmfKUkEXDzpHTOCjWqulQfZPAgPcr/Rmw
+1MjmQYXNVgPNC8tiuL590QcfSkgTLHtMskCOkbEFC5cMO1BZQOzDJlLqhPyh
+l5wWShU7kA/PONkcqDn8IuBljLsSirod1dCplIigNT2FhG0K35PXGeQyj8v8
+UMbr/IFFodmI/wwEAiw=
+  "]],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`lambda$$ = 
+    3.7999999999999996`*^-7, $CellContext`seperation$$ = 
+    0.003, $CellContext`width$$ = 0.000588, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`lambda$$], 7.5*^-7, 3.7999999999999996`*^-7}, {
+      Hold[$CellContext`seperation$$], 0.001, 0.003}, {
+      Hold[$CellContext`width$$], 0.0001, 0.001}}, Typeset`size$$ = {
+    711., {221., 223.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`lambda$4882$$ = 
+    0, $CellContext`seperation$4883$$ = 0, $CellContext`width$4884$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`lambda$$ = 
+        7.5*^-7, $CellContext`seperation$$ = 0.001, $CellContext`width$$ = 
+        0.0001}, "ControllerVariables" :> {
+        Hold[$CellContext`lambda$$, $CellContext`lambda$4882$$, 0], 
+        Hold[$CellContext`seperation$$, $CellContext`seperation$4883$$, 0], 
+        Hold[$CellContext`width$$, $CellContext`width$4884$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[Cos[Pi $CellContext`seperation$$ (
+            Sin[$CellContext`theta]/$CellContext`lambda$$)]^2 (
+         Sin[Pi $CellContext`width$$ (
+             Sin[$CellContext`theta]/$CellContext`lambda$$)]^2/(
+          Pi $CellContext`width$$ (
+           Sin[$CellContext`theta]/$CellContext`lambda$$))^2), \
+{$CellContext`theta, (-Pi)/1000, Pi/1000}, MaxRecursion -> 10, PlotRange -> 
+        Full, PlotStyle -> {{Thick, 
+           Hue[(7.5 10^(-7))/$CellContext`lambda$$ - 1]}, {Thick, 
+           Hue[(7.5 10^(-7))/$CellContext`lambda$$ - 1]}}], 
+      "Specifications" :> {{$CellContext`lambda$$, 7.5*^-7, 
+         3.7999999999999996`*^-7}, {$CellContext`seperation$$, 0.001, 
+         0.003}, {$CellContext`width$$, 0.0001, 0.001}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{752., {282., 285.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.5611493428719196`*^9, {3.561149627927719*^9, 3.561149689554536*^9}, 
+   3.561149861195218*^9, 3.56114990365534*^9, {3.561149942945365*^9, 
+   3.5611499879241543`*^9}, 3.5611506467254963`*^9, 3.561150791831604*^9, {
+   3.5611509340467997`*^9, 3.5611509683975487`*^9}, {3.5611510085261283`*^9, 
+   3.5611510304146247`*^9}, 3.561151128960894*^9, 3.59287377870652*^9, 
+   3.5928739500602107`*^9}]
+}, Open  ]]
+},
+WindowSize->{1350, 671},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification->0.7999999523162842,
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 4277, 125, 161, "Input"],
+Cell[4859, 149, 3094, 58, 580, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

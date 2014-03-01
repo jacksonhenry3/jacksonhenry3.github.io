@@ -1,115 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
-	<link href="../styles/style.css" rel="stylesheet" type="text/css" />
-	<meta name="description" content="Personal showcase of code, art and science">
-	<meta name="keywords" content="HTML,CSS,JavaScript,code,Python,mathematica,matlab">
-	<meta name="author" content="Jackson Henry">
+	<!-- fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:300,200,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700,300' rel='stylesheet' type='text/css'>
+
+	<!-- so it displays properly on mobile -->
+	<meta name="viewport" content="width=device-width, height=device-height">
+
+	<!-- styles -->
+	<link href="../style/programs.css" rel="stylesheet" type="text/css" />
+	<link href="../style/style.css" rel="stylesheet" type="text/css" />
+
+	<!-- interactivity -->
+	<script type="text/javascript" src = '../js/programs.js'>
+	</script>
+
+	<title>Jackson's Code</title>
+
 	<meta charset="UTF-8">
-	<title>Jackson's code</title>
-<style type = 'text/css'>
-#code
-	{
-		border-top-color: rgb(50,50,150);
-		z-index: 100;
-		background-color: rgb(240,240,240);
-		box-shadow:0 -4px 4px #222;
-	}
-</style>
+</head>
 <body>
-
-
-
-	<div class = "top_nav">
+		<header>
 		<ul>
-			<a href = '../home'><li id = 'home' >Home</li></a>
-			<a href = '../science'><li id = 'science'>Science</li></a>
-			<a href = '../art'><li id = 'art'>Art</li></a>
-			<a href = '../code'><li id = 'code'>Code</li></a>
+			<a href = '#master'>
+				<li>
+					Code
+				</li>
+			</a>
+			<a href = '#work_scroll'>
+				<li>
+					Art
+				</li>
+			</a>
+			<a href = '#footer'>
+				<li>
+					Science
+				</li>
+			</a>
 		</ul>
-	</div>
-
-	
-
-	<div id = 'content'>
-		<div class = 'card' style = 'border-top-color:teal;width:400px;'>
-			<div class = 'section_title'>Bouncing balls (JavaScript)</div>
-			<div class = 'subcatagory'>About The Program</div>
-			<p>
-				This simple simulation written using <a href = 'http://d3js.org/'>d3</a> produces circles that bounce arround as if there were on a planet similar to earth but with no atmosphere... and 100% effecient collisions. It's my first javascript simulation that I am really quite proud of although it is terribly innefecient.
-			</p>
-			<a href = 'bouncingballs' class = 'button' style = 'background-color:teal;'>Bounce Balls</a>
+	</header>
+	<div id = 'master'>
+		<div class = 'bracket'></div>
+		<div class = 'program' id = 'Fourier&nbsp;Transform' >
+			<img class = 'main_img' src = 'images/thumbs/DFT.png' onClick="showFullCard(this.parentNode)" alt = 'Fourier Graph'>
+			<div class = 'about' >
+				<h2>Fourier <span class = 'bold'>Transform</span></h2>
+				<p>
+					A short time ago I had a crazy realization; all of the math I've done so far is actually <a href = '#'><span>L</span><span>i</span><span>n</span><span>e</span><span>a</span><span>r</span><span>&nbsp;</span><span>A</span><span>l</span><span>g</span><span>e</span><span>b</span><span>r</span><span>a</span></a> in disguise. scalars and vectors are just matrices of different sizes.  Addition, subtraction, multiplication, and division are all more generally defined on matrices. But more than that, all operations I've learned so far are just matrix operations. All you need to do is multiply by the correct matrix and voilà, you just took a derivative, or so much more.
+				</p>
+				<p> 
+					The first thing you need to understand about functions to understand Discrete Fourier transformation (DFT) is that they are really just a <a href = 'http://en.wikipedia.org/wiki/Set_theory'><span>s</span><span>e</span><span>t</span></a> of pairs of points. (really they are a lot more than that, if you're curious check out <a href = 'http://en.wikibooks.org/wiki/Set_Theory/Relations'><span>s</span><span>e</span><span>t</span><span>&nbsp;</span><span>r</span><span>e</span><span>l</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span></a>). A simple example of a function is f = {(0,1),(1,2),(3,4)}. This function maps 0 to 1, 1 to 2 and 3 to 4, which would look like this <br> <img src = 'images/DFT/function.png'>. As you can see this function, f, is made up of three discrete points. This is where the 'discrete' in DFT comes from, it can only be performed on discrete functions. (to be clear Fourier transforms can be performed on continuous functions, but thats not what this is about)
+				</p>
+				<p>
+					Here's where it gets complicated (feel free to skip to the next paragraph for a less complicated summary). Because functions are effectively a list of points we can think of them as vectors. These vectors are in <a href = 'http://en.wikipedia.org/wiki/Function_space'><span>f</span><span>u</span><span>n</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span><span>&nbsp;</span><span>s</span><span>p</span><span>a</span><span>c</span><span>e</span></a>. Function space (for our purposes) is an n dimensional space where n is the number of points in your function. Each successive value in the function is the component of the function vector in that direction. Using f as an example the function vector would look like <img style = 'float:right;width:100px' src = 'images/DFT/functionvector.png'>. If you have more data points in your function you would need higher dimensional space to visualize it. If you are familiar with linear algebra than you will probably be familiar with the concept of <a href = 'http://en.wikipedia.org/wiki/Basis_(linear_algebra)'><span>B</span><span>a</span><span>s</span><span>i</span><span>s</span><span>&nbsp;</span><span>v</span><span>e</span><span>c</span><span>t</span><span>o</span><span>r</span><span>s </span></a>. Because all the vectors in function space are functions, certain sets of functions can form a set of orthogonal basis vectors for function space. (It's odd to think that two functions can be orthogonal, <a href = 'http://en.wikipedia.org/wiki/Orthogonal_functions'><span>t</span><span>h</span><span>i</span><span>s</span></a> helped me a lot).This means that any arbitrary function can be expressed in terms of that set of functions. One such set is the set of all functions of the form sin(kx) and cos(kx), where k is an integer.
+				</p>
+				<p>
+					Changing a set of data to be represented in terms of sin(kx) and cos(kx) is called a Fourier transform. If we then plot k on the x axis and the value found with this transform for that k on the y axis we can see what frequencies (what k value) is most preventive in the function we are transforming. When i started learning about this it took me a little while but once i made the connection to linear spaces i realized it was just a matter of finding the right matrix to multiply by to transform data in to or out of Fourier space.
+				</p>
+				<p>
+					This program can take a set of discrete data in Cartesian space, and transform it in to Fourier space or visa versa via the Fourier matrix. It is dependent on numpy for the matrix creation and math, and matplotlib for plotting the data.
+				</p>
+				<button onclick = 'shrink()'>Close</button><button onclick = "document.location.href='programs/python/FT.py'">Download</button>
+			</div>
 		</div>
 
-		<div class = 'card' style = 'border-top-color:rgb(50,50,150);width:400px;'>
-			<div class = 'section_title'>Country Pie (Mathematica)</div>
-			<div class = 'subcatagory'>Mathematica and Data</div>
-			<p>
-				One of the great things about mathematica that I hadn't really been able to explore was it's built in data. With this project I wrote a very short script that pulls down data and shows it in a chart.
-			</p>
-			<a href = 'bouncingballs' class = 'button' style = 'background-color:rgb(50,50,150);'>Show me!</a>
+		<div class = 'program' id = 'Sierpinski&nbsp;Triangle'>
+			<img class = 'main_img' src = 'images/thumbs/siepinski_binary.png' onClick="showFullCard(this.parentNode)" alt = 'The Sierpinski triangle'>
+			<div class = 'about' >
+				<h2> The Sierpinski Triangle </h2>
+				<p>
+					First, if you don't know about fractals, read about <a href = 'http://mathworld.wolfram.com/Fractal.html'><span>f</span><span>r</span><span>a</span><span>c</span><span>t</span><span>a</span><span>l</span><span>s</span></a>, they are freaking awesome.
+				<br>
+					The <a href = 'http://mathworld.wolfram.com/SierpinskiSieve.html'><span>S</span><span>i</span><span>e</span><span>r</span><span>p</span><span>i</span><span></span><span>n</span><span>s</span><span>k</span><span>i</span><span>&nbsp;</span><span>T</span><span>r</span><span>i</span><span>a</span><span>n</span><span>g</span><span>l</span><span>e</span></a> is a relatively simple fractal. And, inspired by <a href = 'http://books.google.com/books/about/Chaos_and_Fractals.html?id=jVpS_u0Lg4gC'><span>C</span><span>h</span><span>a</span><span>o</span><span>s</span><span>&nbsp;</span><span>a</span><span>n</span><span>d</span><span>&nbsp;</span><span>F</span><span>r</span><span>a</span><span>c</span><span>t</span><span>a</span><span>l</span><span>s</span></a> I wrote two programs to procedurally generate it. One is based on addressing each node while the other is based on a chaotic process. If both are carried out an infinite number of times they will generate the same figure.
+				</p>
+				<h2>By Randomness</h2>
+				<p>
+					Start with three points (the three points of the largest triangle) and label them 1, 2 and 3. Then pick another point, anywhere. Role a 3 sided die (or a random number generator), if you role a three place a point 1/2 the distance from your initial point to point number three. Then, repeat that process for the new point. If you do this infinite times you will generate the Sierpinski gasket. Each frame of the .gif is a zoomed in image of the top triangle of the previous frame.
+					<br>
+					<img style = 'float:none; display:block;margin:0px auto;margin-top:20px;margin-bottom:20px;' src="images\Sierpinski\SierpinskiRand.gif">
+					<button onclick = 'shrink()'>Close</button><button onclick = "document.location.href='programs/python/SierpinskiByRandomness.py'">Download</button>
+				</p>
+				<h2>By Binary Address</h2>
+				The Sierpinski triangle can be though of as a <a href = 'http://mathworld.wolfram.com/BinaryTree.html'><span>b</span><span>i</span><span>n</span><span>a</span><span>r</span><span>y</span><span>&nbsp;</span><span>t</span><span>r</span><span>e</span><span>e</span></a>. You can assign a unique id to each node in a binary tree in a very simple way. To get to a node all you do is start at the base of the tree and go either left or right at each subsequent node encountered. So if we list all the turn taken to get to a node we get a unique string which describes the path to that node. eg left right left left right. Because there is only two choices we call this a binary string, it is common to let 0 mean left and 1 mean right which would make our previous example in to 01001. using this process we address an arbitrarily large number of nodes and construct the Sierpinski triangle.
+				<p></p>
+				<button onclick = 'shrink()'>Close</button><button onclick = "document.location.href='programs/python/SierpniskiBinaryAddress.py'">Download</button>
+			</div>
 		</div>
 
-		<div class = 'card' style = 'border-top-color:orange;width:400px;'>
-			<div class = 'section_title'>Siepinski Triangle (Python)</div>
-			<div class = 'subcatagory'>About the Sirpinski Triangle</div>
-			<p>
-				The Sirpinski Triangle is a <a href = 'http://www.wikipedia.com/fractals'>fractal</a>. It is made up of smaller copies of itself. The best way to describe it is as a triangle made of triangles made of triangles ...
-			</p>
-			<div class = 'subcatagory'>My Programs</div>
-			<p>
-				I wrote two programs that would generate <em>aproximations</em> of the Sierpinksi triangle. One based on adressing each node in the triangle and the other by a stochastic (random) process.
-			</p>
-			<a href = 'bouncingballs' class = 'button' style = 'background-color:orange;'>I want to see!</a>
+		<div class = 'program' id = 'Global&nbsp;Population'>
+			<img class = 'main_img' src = 'images/thumbs/MeanGlobalPop.png' onClick="showFullCard(this.parentNode)" alt = 'plot of mean global population'>
+			<div class = 'about' >
+				<h2>Global Population</h2>
+				<p>
+					This is a visualization I wrote using <a href = 'd3js.org'><span>d</span><span>3</span></a> to track trends in global population.
+					<button onclick = 'shrink()'>Close</button><button onclick = "document.location.href='programs/javascript/median_global_pop/'">Visit Page</button>
+				</p>
+			</div>
 		</div>
-
-		<div class = 'card' style = 'border-top-color:#D84937;width:400px;'>
-			<div class = 'section_title'>Continued fractions (Python)</div>
-			<div class = 'subcatagory'>About Continued Fractions</div>
-			<p>
-				Continued fractions are fractions whose denominator is a fraction whos denominator is a fraction and so on ad infinitum. 
-			</p>
-			<div class = 'subcatagory'>About The Program</div>
-			<p>
-				This is a program I wrote quite a while ago in Python. It was created primarily to help me with some math I was doing with continued fractions. It
-			</p>
-			<a href = 'bouncingballs' class = 'button' style = 'background-color:#D84937;'>Learn more</a>
-		</div>
-
-		<div class = 'card' style = 'border-top-color:#3F9E5C;width:400px;'>
-			<div class = 'section_title'>3D Shapes (Python)</div>
-			<div class = 'subcatagory'>About The Program</div>
-			<p>
-				The next piece of my Python plotting adventure was to plot surfaces. I began with a sphere and from there quickly progressed to more interesting shapes. Ending, under the direction of Satya (a grad student who was helping me), on spherical harmonics. Which at the time I had no understanding of, and I now have a very limmited understanding of.
-			</p>
-			<a href = 'bouncingballs' class = 'button' style = 'background-color:#3F9E5C;'>See figures</a>
-		</div>
-
-		<div class = 'card' style = 'border-top-color:orange;width:400px;'>
-			<div class = 'section_title'>3D Lissajous figures (Python)</div>
-			<div class = 'subcatagory'>About The Program</div>
-			<p>
-				If you haven't read about Lissajous figures yet, check out my previous post. 3D Lissajous figures are essentialy the same thing, but with a third parameter. the functions that describe x y and z are all periodic. This creates lots of intricate beautifull figures that weave in and out of themselves.
-			</p>
-			<a href = 'bouncingballs' class = 'button' style = 'background-color:orange;'>View source</a>
-		</div>
-
-		<div class = 'card' style = 'border-top-color:rgb(50,50,150);width:400px;'>
-			<div class = 'section_title'>2D Lissajous figures (Python)</div>
-			<div class = 'subcatagory'>About Lissajous Figures</div>
-			<p>
-				In my quest to learn Python for scientific plotting I started plotting lissajous figures. The figures themselvs are relativly simple, but beautifull. They are parametric functions where both the x and y are described by either a sine or a cosine. The real fun starts when you mess arround with their coefecients ...
-			</p>
-			<a href = 'bouncingballs' class = 'button' style = 'background-color:rgb(50,50,150);'>Read on</a>
-		</div>
-
-	</div>
-		
 
 
 	</div>
-
 </body>
 </html>

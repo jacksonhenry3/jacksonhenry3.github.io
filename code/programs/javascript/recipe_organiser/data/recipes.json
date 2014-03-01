@@ -1,0 +1,87 @@
+{
+    "French bread": {
+        "ingredients": [
+            "3 cups warm water",
+            "1 table spoon yeast",
+            "1 cup wheat bram(germ)",
+            "1 table spoon salt",
+            "4 to 5 cup whole wheat (or white) bread flower"
+        ],
+        "instructions": [
+            "total time 4 hrs",
+            "Gently mix water,yeast, wheat bran, salt and 1 cup flower in a large mixing bowl. Let sit for 3 min while yeast bubles",
+            "Add two to three cups of flower and kneed untill it forms dough like a babies bottom. If sticky, add more flower.",
+            "Cover in a bowl and let sit untill it has doubled in size",
+            "preheat oven to 400 F",
+            "punch it down and form two loaves and then let sit for another 30 minutes (or longer )",
+            "put bread in oven for 30 minutes",
+            "enjoy with oil and vinger dip"
+        ],
+        "image": "data/french_bread.JPG"
+    },
+    "Lasagna": {
+        "ingredients": [
+            "1 jar suace",
+            "8 oz mozerala cheese",
+            "2 lbs ricotta",
+            "1 package oven ready lasgna noodles"
+        ],
+        "instructions": [
+            "total time 45 min",
+            "preheate oven to 375 F",
+            "Line bottom of pan with pleanty of sauce",
+            "top with three sheets of noodles, the sheets will expand while baking, so they dont need to completly cover previous layer",
+            "A layer of ricotta and mozeralla, this should go to the edge",
+            "Lather rince repeat",
+            "cover with foil and cook for 30 minutes",
+            "remove foil and brown cheese"
+        ],
+        "image": "data/lasagna.JPG"
+    },
+    "Bread dip": {
+        "ingredients": [
+            "olive oil",
+            "balsamic vinegar",
+            "spices (oregono, basil, red pepper flakes, rosemary, salt, and pepper)",
+            "garlic",
+            "parmesean cheese"
+        ],
+        "instructions": [
+            "Mix all ingredient in a bowl... enjoy"
+        ],
+        "image": "data/bread_dip.JPG"
+    },
+    "Swiss sablés cookies": {
+        "ingredients": [
+            "1 stick of butter",
+            "1/4 cup sugar",
+            "1/2 tsp vanilla",
+            "1/2 stp salt",
+            "1 cup flower"
+        ],
+        "instructions": [
+            "Mix butter and sugar untill very creamy.",
+            "Mix in the rest of the ingredients and let the dough rest for 1 hour.",
+            "Roll out and cut circle cookies, (about 2 inches wide)",
+            "Bake very carefully untill light brown, about 10 minutes",
+            "Glaze: combine sugar, powdered sugar, and lemon juice. Want to end up with a rather thin glaze, and top cookies with it."
+        ],
+        "image": "http://farm3.static.flickr.com/2523/4170428569_471520c5b5.jpg"
+    },
+    "Sweedish pancakes": {
+        "ingredients": [
+            "1/4 cup wheet germ",
+            "2 cups flower",
+            "3 heaping table spoons plain yogurt",
+            "2-3 eggs",
+            "salt to taste",
+            "low fat milk, enough to mkae a thin batter"
+        ],
+        "instructions": [
+            "Mix all ingredients",
+            "Cook over high heat in margerine",
+            "Very thin pancakes (almost like crepes) they cook really quickly."
+        ],
+        "image": "data/sweedish_pancakes.JPG"
+    }
+}

@@ -1,0 +1,535 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     22993,        526]
+NotebookOptionsPosition[     22342,        498]
+NotebookOutlinePosition[     22683,        513]
+CellTagsIndexPosition[     22640,        510]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"2", "/", "l"}], " ", 
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    RowBox[{"8", "h", " ", 
+     RowBox[{"x", "/", "l"}], "*", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"n", "*", "Pi", "*", 
+       RowBox[{"x", "/", "l"}]}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", 
+      RowBox[{"l", "/", "8"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5957293397275677`*^9, 3.595729404893727*^9}, {
+   3.595729464406146*^9, 3.595729486517789*^9}, 3.595729604876185*^9, 
+   3.59573039891468*^9}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"2", " ", "h", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "n"}], " ", "\[Pi]", " ", 
+      RowBox[{"Cos", "[", 
+       FractionBox[
+        RowBox[{"n", " ", "\[Pi]"}], "8"], "]"}]}], "+", 
+     RowBox[{"8", " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox[
+        RowBox[{"n", " ", "\[Pi]"}], "8"], "]"}]}]}], ")"}]}], 
+  RowBox[{
+   SuperscriptBox["n", "2"], " ", 
+   SuperscriptBox["\[Pi]", "2"]}]]], "Output",
+ CellChangeTimes->{
+  3.595729406538822*^9, {3.595729484079176*^9, 3.595729487547472*^9}, 
+   3.5957296060689707`*^9, 3.595729664819882*^9, 3.5957303992809205`*^9, 
+   3.5957345588701468`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"2", "/", "l"}], " ", 
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "8"}], "h", " ", 
+        RowBox[{"x", "/", "l"}]}], "+", 
+       RowBox[{"2", "h"}]}], ")"}], "*", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"n", "*", "Pi", "*", 
+       RowBox[{"x", "/", "l"}]}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"l", "/", "8"}], ",", 
+      RowBox[{"l", "/", "4"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5957296111323295`*^9, 3.595729615196021*^9}, 
+   3.595730405554077*^9, {3.595734225307661*^9, 3.595734265362191*^9}, {
+   3.595734449752879*^9, 3.5957344503052425`*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"2", " ", "h", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"n", " ", "\[Pi]", " ", 
+      RowBox[{"Cos", "[", 
+       FractionBox[
+        RowBox[{"n", " ", "\[Pi]"}], "8"], "]"}]}], "+", 
+     RowBox[{"8", " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox[
+        RowBox[{"n", " ", "\[Pi]"}], "8"], "]"}]}], "-", 
+     RowBox[{"8", " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox[
+        RowBox[{"n", " ", "\[Pi]"}], "4"], "]"}]}]}], ")"}]}], 
+  RowBox[{
+   SuperscriptBox["n", "2"], " ", 
+   SuperscriptBox["\[Pi]", "2"]}]]], "Output",
+ CellChangeTimes->{3.5957296159605236`*^9, 3.5957296727401295`*^9, 
+  3.5957304102431817`*^9, 3.595734451203837*^9, 3.595734545226109*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"2", "/", "l"}], " ", 
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      RowBox[{"8", "h", " ", 
+       RowBox[{"x", "/", "l"}], "*", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"n", "*", "Pi", "*", 
+         RowBox[{"x", "/", "l"}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "0", ",", 
+        RowBox[{"l", "/", "8"}]}], "}"}]}], "]"}]}], "+", 
+   RowBox[{
+    RowBox[{"2", "/", "l"}], " ", 
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "8"}], "h", " ", 
+          RowBox[{"x", "/", "l"}]}], "+", 
+         RowBox[{"2", "h"}]}], ")"}], "*", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"n", "*", "Pi", "*", 
+         RowBox[{"x", "/", "l"}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{"l", "/", "8"}], ",", 
+        RowBox[{"l", "/", "4"}]}], "}"}]}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5957301100663815`*^9, 3.5957301105136824`*^9}, {
+  3.5957301570394926`*^9, 3.5957301634267235`*^9}, {3.595730425645387*^9, 
+  3.595730428644374*^9}, {3.595730567436262*^9, 3.595730569915909*^9}, {
+  3.5957306318109007`*^9, 3.5957306366421022`*^9}, {3.595734287396784*^9, 
+  3.595734291835724*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"64", " ", "h", " ", 
+   SuperscriptBox[
+    RowBox[{"Sin", "[", 
+     FractionBox[
+      RowBox[{"n", " ", "\[Pi]"}], "16"], "]"}], "2"], " ", 
+   RowBox[{"Sin", "[", 
+    FractionBox[
+     RowBox[{"n", " ", "\[Pi]"}], "8"], "]"}]}], 
+  RowBox[{
+   SuperscriptBox["n", "2"], " ", 
+   SuperscriptBox["\[Pi]", "2"]}]]], "Output",
+ CellChangeTimes->{3.5957301110390263`*^9, 3.5957301640731506`*^9, 
+  3.5957304291947346`*^9, 3.5957305703431892`*^9, 3.595730637146433*^9, 
+  3.595734311784936*^9, 3.5957346502826924`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"l", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"h", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"64", " ", 
+        SuperscriptBox[
+         RowBox[{"Sin", "[", 
+          FractionBox[
+           RowBox[{"n", " ", "\[Pi]"}], "16"], "]"}], "2"], " ", 
+        RowBox[{"Sin", "[", 
+         FractionBox[
+          RowBox[{"n", " ", "\[Pi]"}], "8"], "]"}]}], 
+       RowBox[{
+        SuperscriptBox["n", "2"], " ", 
+        SuperscriptBox["\[Pi]", "2"]}]], "*", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"n", "*", "Pi", "*", 
+        RowBox[{"x", "/", "l"}]}], "]"}], 
+      RowBox[{"Cos", "[", 
+       RowBox[{"v", "*", "n", "*", 
+        RowBox[{"Pi", "/", "l"}], "*", "t"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "1", ",", "100"}], "}"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"%", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "l"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "3"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.5957312248286743`*^9, 3.5957312509429703`*^9}, {
+   3.5957312922393227`*^9, 3.5957313233539267`*^9}, 3.5957341725633717`*^9, {
+   3.5957343193214903`*^9, 3.5957343418784323`*^9}, {3.5957353985785503`*^9, 
+   3.595735455299117*^9}, {3.595735487324333*^9, 3.5957354884200544`*^9}, {
+   3.5957355251083593`*^9, 3.595735608886848*^9}, {3.5957356443293176`*^9, 
+   3.5957356667962017`*^9}, {3.5957357007857122`*^9, 
+   3.5957357102559876`*^9}, {3.5958245598449793`*^9, 
+   3.5958245745175433`*^9}, {3.5958246090504165`*^9, 3.595824687366597*^9}, {
+   3.5958247558406267`*^9, 3.595824762714182*^9}, {3.5958249305983763`*^9, 
+   3.5958249545982714`*^9}, {3.595825098802782*^9, 3.5958251079478416`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 3., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 3}}, Typeset`size$$ = {360., {108., 111.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`t$4266$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$4266$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[64 Pi^(-2) Cos[Pi $CellContext`t$$] Sin[Rational[1, 16] Pi]^2 
+         Sin[Rational[1, 8] Pi] Sin[Pi $CellContext`x] + 
+        8 2^Rational[1, 2] Pi^(-2) Cos[2 Pi $CellContext`t$$] 
+         Sin[Rational[1, 8] Pi]^2 Sin[2 Pi $CellContext`x] + 
+        Rational[64, 9] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[3 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[3 Pi $CellContext`x] + 
+        2 Pi^(-2) Cos[4 Pi $CellContext`t$$] Sin[4 Pi $CellContext`x] + 
+        Rational[64, 25] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[5 Pi $CellContext`t$$] 
+         Sin[5 Pi $CellContext`x] + 
+        Rational[8, 9] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[6 Pi $CellContext`t$$] Sin[6 Pi $CellContext`x] + 
+        Rational[64, 49] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[7 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[7 Pi $CellContext`x] + 
+        Rational[-64, 81] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[9 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[9 Pi $CellContext`x] + 
+        Rational[-8, 25] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[10 Pi $CellContext`t$$] Sin[10 Pi $CellContext`x] + 
+        Rational[-64, 121] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[11 Pi $CellContext`t$$] 
+         Sin[11 Pi $CellContext`x] + 
+        Rational[-2, 9] Pi^(-2) Cos[12 Pi $CellContext`t$$] 
+         Sin[12 Pi $CellContext`x] + 
+        Rational[-64, 169] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[13 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[13 Pi $CellContext`x] + 
+        Rational[-8, 49] 2^Rational[1, 2] Pi^(-2) Cos[14 Pi $CellContext`t$$] 
+         Sin[Rational[1, 8] Pi]^2 Sin[14 Pi $CellContext`x] + 
+        Rational[-64, 225] Pi^(-2) Cos[15 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[15 Pi $CellContext`x] + 
+        Rational[64, 289] Pi^(-2) Cos[17 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[17 Pi $CellContext`x] + 
+        Rational[8, 81] 2^Rational[1, 2] Pi^(-2) Cos[18 Pi $CellContext`t$$] 
+         Sin[Rational[1, 8] Pi]^2 Sin[18 Pi $CellContext`x] + 
+        Rational[64, 361] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[19 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[19 Pi $CellContext`x] + 
+        Rational[2, 25] Pi^(-2) Cos[20 Pi $CellContext`t$$] 
+         Sin[20 Pi $CellContext`x] + 
+        Rational[64, 441] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[21 Pi $CellContext`t$$] 
+         Sin[21 Pi $CellContext`x] + 
+        Rational[8, 121] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[22 Pi $CellContext`t$$] Sin[22 Pi $CellContext`x] + 
+        Rational[64, 529] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[23 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[23 Pi $CellContext`x] + 
+        Rational[-64, 625] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[25 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[25 Pi $CellContext`x] + 
+        Rational[-8, 169] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[26 Pi $CellContext`t$$] Sin[26 Pi $CellContext`x] + 
+        Rational[-64, 729] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[27 Pi $CellContext`t$$] 
+         Sin[27 Pi $CellContext`x] + 
+        Rational[-2, 49] Pi^(-2) Cos[28 Pi $CellContext`t$$] 
+         Sin[28 Pi $CellContext`x] + 
+        Rational[-64, 841] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[29 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[29 Pi $CellContext`x] + 
+        Rational[-8, 225] 2^Rational[1, 2] Pi^(-2) 
+         Cos[30 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi]^2 
+         Sin[30 Pi $CellContext`x] + 
+        Rational[-64, 961] Pi^(-2) Cos[31 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[31 Pi $CellContext`x] + 
+        Rational[64, 1089] Pi^(-2) Cos[33 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[33 Pi $CellContext`x] + 
+        Rational[8, 289] 2^Rational[1, 2] Pi^(-2) Cos[34 Pi $CellContext`t$$] 
+         Sin[Rational[1, 8] Pi]^2 Sin[34 Pi $CellContext`x] + 
+        Rational[64, 1225] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[35 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[35 Pi $CellContext`x] + 
+        Rational[2, 81] Pi^(-2) Cos[36 Pi $CellContext`t$$] 
+         Sin[36 Pi $CellContext`x] + 
+        Rational[64, 1369] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[37 Pi $CellContext`t$$] 
+         Sin[37 Pi $CellContext`x] + 
+        Rational[8, 361] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[38 Pi $CellContext`t$$] Sin[38 Pi $CellContext`x] + 
+        Rational[64, 1521] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[39 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[39 Pi $CellContext`x] + 
+        Rational[-64, 1681] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[41 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[41 Pi $CellContext`x] + 
+        Rational[-8, 441] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[42 Pi $CellContext`t$$] Sin[42 Pi $CellContext`x] + 
+        Rational[-64, 1849] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[43 Pi $CellContext`t$$] 
+         Sin[43 Pi $CellContext`x] + 
+        Rational[-2, 121] Pi^(-2) Cos[44 Pi $CellContext`t$$] 
+         Sin[44 Pi $CellContext`x] + 
+        Rational[-64, 2025] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[45 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[45 Pi $CellContext`x] + 
+        Rational[-8, 529] 2^Rational[1, 2] Pi^(-2) 
+         Cos[46 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi]^2 
+         Sin[46 Pi $CellContext`x] + 
+        Rational[-64, 2209] Pi^(-2) Cos[47 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[47 Pi $CellContext`x] + 
+        Rational[64, 2401] Pi^(-2) Cos[49 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[49 Pi $CellContext`x] + 
+        Rational[8, 625] 2^Rational[1, 2] Pi^(-2) Cos[50 Pi $CellContext`t$$] 
+         Sin[Rational[1, 8] Pi]^2 Sin[50 Pi $CellContext`x] + 
+        Rational[64, 2601] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[51 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[51 Pi $CellContext`x] + 
+        Rational[2, 169] Pi^(-2) Cos[52 Pi $CellContext`t$$] 
+         Sin[52 Pi $CellContext`x] + 
+        Rational[64, 2809] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[53 Pi $CellContext`t$$] 
+         Sin[53 Pi $CellContext`x] + 
+        Rational[8, 729] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[54 Pi $CellContext`t$$] Sin[54 Pi $CellContext`x] + 
+        Rational[64, 3025] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[55 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[55 Pi $CellContext`x] + 
+        Rational[-64, 3249] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[57 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[57 Pi $CellContext`x] + 
+        Rational[-8, 841] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[58 Pi $CellContext`t$$] Sin[58 Pi $CellContext`x] + 
+        Rational[-64, 3481] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[59 Pi $CellContext`t$$] 
+         Sin[59 Pi $CellContext`x] + 
+        Rational[-2, 225] Pi^(-2) Cos[60 Pi $CellContext`t$$] 
+         Sin[60 Pi $CellContext`x] + 
+        Rational[-64, 3721] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[61 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[61 Pi $CellContext`x] + 
+        Rational[-8, 961] 2^Rational[1, 2] Pi^(-2) 
+         Cos[62 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi]^2 
+         Sin[62 Pi $CellContext`x] + 
+        Rational[-64, 3969] Pi^(-2) Cos[63 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[63 Pi $CellContext`x] + 
+        Rational[64, 4225] Pi^(-2) Cos[65 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[65 Pi $CellContext`x] + 
+        Rational[8, 1089] 2^Rational[1, 2] Pi^(-2) 
+         Cos[66 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi]^2 
+         Sin[66 Pi $CellContext`x] + 
+        Rational[64, 4489] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[67 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[67 Pi $CellContext`x] + 
+        Rational[2, 289] Pi^(-2) Cos[68 Pi $CellContext`t$$] 
+         Sin[68 Pi $CellContext`x] + 
+        Rational[64, 4761] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[69 Pi $CellContext`t$$] 
+         Sin[69 Pi $CellContext`x] + 
+        Rational[8, 1225] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[70 Pi $CellContext`t$$] Sin[70 Pi $CellContext`x] + 
+        Rational[64, 5041] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[71 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[71 Pi $CellContext`x] + 
+        Rational[-64, 5329] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[73 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[73 Pi $CellContext`x] + 
+        Rational[-8, 1369] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[74 Pi $CellContext`t$$] Sin[74 Pi $CellContext`x] + 
+        Rational[-64, 5625] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[75 Pi $CellContext`t$$] 
+         Sin[75 Pi $CellContext`x] + 
+        Rational[-2, 361] Pi^(-2) Cos[76 Pi $CellContext`t$$] 
+         Sin[76 Pi $CellContext`x] + 
+        Rational[-64, 5929] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[77 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[77 Pi $CellContext`x] + 
+        Rational[-8, 1521] 2^Rational[1, 2] Pi^(-2) 
+         Cos[78 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi]^2 
+         Sin[78 Pi $CellContext`x] + 
+        Rational[-64, 6241] Pi^(-2) Cos[79 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[79 Pi $CellContext`x] + 
+        Rational[64, 6561] Pi^(-2) Cos[81 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[81 Pi $CellContext`x] + 
+        Rational[8, 1681] 2^Rational[1, 2] Pi^(-2) 
+         Cos[82 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi]^2 
+         Sin[82 Pi $CellContext`x] + 
+        Rational[64, 6889] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[83 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[83 Pi $CellContext`x] + 
+        Rational[2, 441] Pi^(-2) Cos[84 Pi $CellContext`t$$] 
+         Sin[84 Pi $CellContext`x] + 
+        Rational[64, 7225] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[85 Pi $CellContext`t$$] 
+         Sin[85 Pi $CellContext`x] + 
+        Rational[8, 1849] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[86 Pi $CellContext`t$$] Sin[86 Pi $CellContext`x] + 
+        Rational[64, 7569] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[87 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[87 Pi $CellContext`x] + 
+        Rational[-64, 7921] Pi^(-2) Cos[Rational[1, 16] Pi]^2 
+         Cos[89 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi] 
+         Sin[89 Pi $CellContext`x] + 
+        Rational[-8, 2025] 2^Rational[1, 2] Pi^(-2) Cos[Rational[1, 8] Pi]^2 
+         Cos[90 Pi $CellContext`t$$] Sin[90 Pi $CellContext`x] + 
+        Rational[-64, 8281] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[Rational[3, 16] Pi]^2 Cos[91 Pi $CellContext`t$$] 
+         Sin[91 Pi $CellContext`x] + 
+        Rational[-2, 529] Pi^(-2) Cos[92 Pi $CellContext`t$$] 
+         Sin[92 Pi $CellContext`x] + 
+        Rational[-64, 8649] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[93 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[93 Pi $CellContext`x] + 
+        Rational[-8, 2209] 2^Rational[1, 2] Pi^(-2) 
+         Cos[94 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi]^2 
+         Sin[94 Pi $CellContext`x] + 
+        Rational[-64, 9025] Pi^(-2) Cos[95 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[95 Pi $CellContext`x] + 
+        Rational[64, 9409] Pi^(-2) Cos[97 Pi $CellContext`t$$] 
+         Sin[Rational[1, 16] Pi]^2 Sin[Rational[1, 8] Pi] 
+         Sin[97 Pi $CellContext`x] + 
+        Rational[8, 2401] 2^Rational[1, 2] Pi^(-2) 
+         Cos[98 Pi $CellContext`t$$] Sin[Rational[1, 8] Pi]^2 
+         Sin[98 Pi $CellContext`x] + 
+        Rational[64, 9801] Pi^(-2) Cos[Rational[1, 8] Pi] 
+         Cos[99 Pi $CellContext`t$$] Sin[Rational[3, 16] Pi]^2 
+         Sin[99 Pi $CellContext`x] + 
+        Rational[2, 625] Pi^(-2) Cos[100 Pi $CellContext`t$$] 
+         Sin[100 Pi $CellContext`x], {$CellContext`x, 0, $CellContext`l}], 
+      "Specifications" :> {{$CellContext`t$$, 0, 3}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{409., {153., 158.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.595731320037731*^9, 3.595731324403623*^9}, 
+   3.5957341909188795`*^9, {3.5957343211957293`*^9, 3.5957343423987722`*^9}, {
+   3.595735445204433*^9, 3.595735488772287*^9}, {3.5957355257157593`*^9, 
+   3.5957355639470787`*^9}, 3.5957356099485474`*^9, {3.595735646008431*^9, 
+   3.595735668127078*^9}, {3.595735701334072*^9, 3.5957357108333693`*^9}, 
+   3.595824503936103*^9, {3.595824564392068*^9, 3.5958245750488243`*^9}, 
+   3.595824620410327*^9, {3.595824657615199*^9, 3.595824688038501*^9}, {
+   3.595824763351602*^9, 3.5958247803528633`*^9}, 3.595824853782496*^9, {
+   3.595824925553031*^9, 3.5958249551726503`*^9}, 3.5958251084992013`*^9}]
+}, Open  ]]
+},
+WindowSize->{933, 943},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 550, 15, 31, "Input"],
+Cell[1132, 39, 674, 20, 58, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1843, 64, 725, 21, 31, "Input"],
+Cell[2571, 87, 727, 21, 58, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3335, 113, 1328, 37, 52, "Input"],
+Cell[4666, 152, 556, 15, 58, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5259, 172, 2027, 50, 165, "Input"],
+Cell[7289, 224, 15037, 271, 328, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

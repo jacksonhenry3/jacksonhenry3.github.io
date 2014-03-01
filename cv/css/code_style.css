@@ -1,0 +1,180 @@
+body
+{
+	position: relative;
+	margin:0px;
+	background-color:#EB6F62;
+}
+
+/*set main div to be the one that scrolls so there isnt any overflow on mobile phones*/
+#master_div
+{
+	overflow-x:hidden;
+	height    :100%;
+	transition:all .5s;
+}
+
+#title
+{
+	padding:20px;
+	text-align: center;
+	font-weight: normal;
+	font-size:80px;
+	color:white;
+	font-family: 'Raleway', sans-serif;
+	background-color: #D94839;
+}
+
+.navigation
+{
+	text-align: center;
+	background-color:#C0392B;
+	padding:5px;
+}
+
+#categories
+{
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+	position  : relative;
+	width     	:310px;
+	height  	  :0px;
+	margin  	  :0px auto;
+	transition:left .4s;
+}
+
+.navigation .catagory
+{
+	width:100px;
+	overflow:hidden;
+	font-family: 'Raleway', sans-serif;
+	color:white;
+	display: inline-block;
+	transition:left .2s;
+	cursor: pointer;
+	
+}
+
+.navigation .catagory:hover
+{
+	text-shadow:0 0 3px white;
+}
+
+.arrow-down {
+	z-index: 100;
+	margin:0px auto;
+	width: 0; 
+	height: 0; 
+	border-left: 15px inset rgba(0, 255, 0, 0);
+	border-right: 15px solid rgba(0, 255, 0, 0);
+	border-top: 15px solid #C0392B;
+}
+
+/*Program circles*/
+	.program
+	{	
+		/*-webkit-backface-visibility: hidden;*/
+		width:300px;
+		height:300px;
+		margin:50px;
+		border-radius: 150px;
+		background-image: url('../code/images/default.png');
+		background-size:300px 300px;
+		box-shadow: 0px 0px 10px #222 inset;        
+	}
+
+	.program:hover >  .title 
+	{
+		top:5px;
+	}
+
+	.program:hover >  .description
+	{
+		top: 25px;
+		opacity:1;
+	}
+	.program:hover
+	{
+		cursor: pointer;
+	}
+
+	.title
+	{	
+		transition:opacity .3s, top .3s;
+		position: relative;
+		top:225px;
+		background-color: rgba(0,0,0,.85);
+		border-radius: 2px;
+		padding:5px;
+		font-family: 'Raleway', sans-serif;
+		color:white;
+		font-size: 25px;
+		z-index: 10;
+	}
+
+	.description
+	{	
+		text-align: left;
+		transition:opacity .3s, top .3s;
+		position: relative;
+		top:75px;
+		padding:10px;
+		border-radius: 5px;
+		background-color: rgba(0,0,0,.85);
+		font-family: 'Open Sans', sans-serif;
+		color:white;
+		font-size: 17px;
+		width:80%;
+		margin:0px auto;
+		opacity:0;
+	}
+
+.page
+	{
+		position: absolute;
+		width           :100%;
+		text-align: center;
+	}
+
+#python
+{
+    left:0%;
+}
+
+#javascript
+{
+	left:100%;
+}
+
+#mathematica
+{
+	left:200%;
+}
+
+
+#articles
+{
+	-webkit-backface-visibility: hidden;
+	transition:left .5s;
+	position: relative;
+	left:0%;
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+}
+
+#back, #forward
+{
+	cursor: pointer;
+	transition:text-shadow .3s;
+}
+
+
+#back:hover, #forward:hover
+{
+	text-shadow: 0 0 5px rgb(255,255,255);
+}
+
+.inline
+{
+	overflow: hidden;
+	display: inline-block;
+}

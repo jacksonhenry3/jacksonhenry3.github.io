@@ -1,0 +1,2 @@
+3) refactor sub_style
+5)populate art, code and science with posts

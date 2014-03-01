@@ -1,0 +1,129 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4307,        120]
+NotebookOptionsPosition[      3981,        103]
+NotebookOutlinePosition[      4335,        119]
+CellTagsIndexPosition[      4292,        116]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FermiEnergy", " ", "=", " ", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"1", "/", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"E", "^", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"Energy", "-", "FermiEnergy"}], ")"}], "/", 
+            RowBox[{"(", 
+             RowBox[{"k", "*", "T"}], ")"}]}], ")"}]}], "+", "1"}], ")"}]}], 
+      "*", 
+      RowBox[{"Energy", "^", 
+       RowBox[{"(", 
+        RowBox[{"1", "/", "2"}], ")"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"Energy", ",", "0", ",", "10"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"T", ",", ".0001", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"FermiEnergy", ",", "1", ",", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.590930071555008*^9, 3.590930188039166*^9}, {
+  3.590930256173769*^9, 3.59093026098954*^9}, {3.590930483144988*^9, 
+  3.59093055129515*^9}, {3.590930602823268*^9, 3.5909306477123747`*^9}, {
+  3.590930685206251*^9, 3.590930736562811*^9}, {3.590930836043353*^9, 
+  3.590930870960972*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`FermiEnergy$$ = 6.16, $CellContext`T$$ = 
+    0.17500000000000002`, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`T$$], 0.0001, 3}, {
+      Hold[$CellContext`FermiEnergy$$], 1, 10}}, Typeset`size$$ = {
+    360., {111., 116.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`T$2565$$ = 
+    0, $CellContext`FermiEnergy$2566$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`FermiEnergy$$ = 1, $CellContext`T$$ = 
+        0.0001}, "ControllerVariables" :> {
+        Hold[$CellContext`T$$, $CellContext`T$2565$$, 0], 
+        Hold[$CellContext`FermiEnergy$$, $CellContext`FermiEnergy$2566$$, 0]},
+       "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[(1/(E^(($CellContext`Energy - \
+$CellContext`FermiEnergy$$)/($CellContext`k $CellContext`T$$)) + 
+         1)) $CellContext`Energy^(1/2), {$CellContext`Energy, 0, 10}], 
+      "Specifications" :> {{$CellContext`T$$, 0.0001, 
+         3}, {$CellContext`FermiEnergy$$, 1, 10}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{403., {167., 173.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.5909305567294273`*^9, {3.59093061208775*^9, 3.590930649572798*^9}, {
+   3.590930685983158*^9, 3.590930737584145*^9}, {3.590930837312406*^9, 
+   3.590930871398429*^9}}]
+}, Open  ]]
+},
+WindowSize->{1920, 948},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 1269, 34, 58, "Input"],
+Cell[1851, 58, 2114, 42, 357, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

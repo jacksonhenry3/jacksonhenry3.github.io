@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
+	<link href="../styles/style.css" rel="stylesheet" type="text/css" />
+	<meta name="description" content="Personal showcase of code, art and science">
+	<meta name="keywords" content="HTML,CSS,JavaScript,code,python,mathematica,matlab">
+	<meta name="author" content="Jackson Henry">
+	<meta charset="UTF-8">
+	<title>Jackson's Science</title>
+<style type = 'text/css'>
+#science
+	{
+		border-top-color: orange;
+		z-index: 100;
+		background-color: rgb(240,240,240);
+		box-shadow:0 -4px 4px #222;
+	}
+</style>
+<body>
+
+
+
+	<div class = "top_nav">
+		<ul>
+			<a href = '../home'><li id = 'home' >Home</li></a>
+			<a href = '../science'><li id = 'science'>Science</li></a>
+			<a href = '../art'><li id = 'art'>Art</li></a>
+			<a href = '../code'><li id = 'code'>Code</li></a>
+		</ul>
+	</div>
+
+	
+
+	<div id = 'content'>
+		<div class = 'card' style = 'border-top-color:#3F9E5C;width:500px;'>
+			<div class = 'section_title'>Sun Movie</div>
+			<div class = 'subcatagory'>About the video</div>
+
+			<p>
+				This is a short clip I put together from a series of images downloaded from the <a href = "http://sdo.gsfc.nasa.gov/">Solar Dynamics Observatory</a>. They actualy have a tool in the webpage to generate video from any given period of solar activity. But as a challenge i downloaded the actual image files and used mathematica to stich them together in to a video.
+			</p>
+			<div class = 'subcatagory'>the Video</div>
+			<video width="400px"  id = 'sun_movie' style = 'display:none;margin:0px auto;' controls>
+				<source src="media/su.ogv">
+				<source src="media/sun.webm">
+				Your browser does not support the video tag, or may not support ogv video platback.
+			</video>
+			<a class = 'button' id = "show_sun" onclick = "
+				document.getElementById('hide_sun').style.display = 'inline-block';
+				this.style.display = 'none';
+				document.getElementById('sun_movie').style.display = 'block';"
+
+			 style = 'background-color:#3F9E5C;'>Show Video</a>
+
+			 <a class = 'button' id = 'hide_sun'  onclick = 
+			 "document.getElementById('show_sun').style.display = 'inline-block';
+			 document.getElementById('hide_sun').style.display = 'none';
+			document.getElementById('sun_movie').style.display = 'none';"
+			 style = 'background-color:#3F9E5C;display:none;'>Hide Video</a>
+			 </div>
+
+
+
+		<div class = 'card' style = 'border-top-color:#D84937;width:500px;'>
+			<div class = 'section_title'>Relativistic Trains</div>
+			<div class = 'subcatagory'>The Problem</div>
+
+			<p>
+			
+			</p>	
+			<a class = 'button' href = '#'>See more</a>	
+		</div>
+
+		<div class = 'card' style = 'border-top-color:orange;width:500px;'>
+			<div class = 'section_title'>The devils stair case</div>
+			<div class = 'subcatagory'>What is it?</div>
+
+			<p>
+			
+			</p>	
+			<a class = 'button' style = 'background-color:orange;' href = '#'>Read more</a>	
+		</div>
+
+		<div class = 'card' style = 'border-top-color:teal;width:500px;'>
+			<div class = 'section_title'>Continued Recursive Fractions</div>
+			<div class = 'subcatagory'>Continued fractions</div>
+
+			<p>
+			
+			</p>	
+
+			<div class = 'subcatagory'>Continued <em> Recursive </em> fractions</div>
+			<a class = 'button' style = 'background-color:teal;' href = '#'>I must know more!</a>	
+		</div>
+	</div>
+
+</body>
+</html>

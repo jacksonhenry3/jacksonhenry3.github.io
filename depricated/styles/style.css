@@ -1,0 +1,261 @@
+
+body
+{
+	position:relative;
+	top:-16px;
+	background-color: white;
+	margin:0px;
+
+}
+#content
+{
+	
+	padding: 40px;
+	box-shadow: 0 0 10px #222;
+	background-color: rgb(240,240,240);
+	text-align:center;
+}
+
+a
+{
+	text-decoration: none;
+	color: #000;
+	border-bottom: 1px solid rgba(0,0,255,.35);
+	transition: border-bottom .4s;
+	cursor: pointer; 
+
+}
+
+a:hover
+{
+	border-bottom: 1px solid blue;
+}
+
+
+/*----------top_nav-------*/
+	.top_nav
+	{
+		margin:0px auto;
+		height:45px; /*height of text +margin+border*/
+	}
+	.top_nav ul
+	{
+		width:100%;
+	}
+
+	.top_nav li
+	{
+		color:#111;
+		position:relative;
+		left:-40px;
+		float:left;
+		text-align: center;
+		width:25%;
+		font-family: 'Raleway', sans-serif;
+		list-style-type: none;
+		margin-left:0%;
+		font-size: 27px;
+		border-top: 3px solid rgba(0,0,0,0);
+		padding-top:5px;
+		padding-bottom: 5px;
+		transition:border-top-color .4s;
+		border-radius: 1px 1px 0px 0px
+	}
+	#home:hover
+	{
+		border-top-color: #D84937;/*redish*/
+	}
+	#science:hover
+	{
+		border-top-color: orange;
+	}
+	#art:hover
+	{
+		border-top-color: #3F9E5C;
+	}
+	#code:hover
+	{
+		border-top-color: rgb(50,50,150);
+	}
+
+/*----------card----------*/
+	.card
+	{
+		font-family: 'Raleway', sans-serif;
+
+		margin:10px;
+		display: inline-block;
+		background-color: #FFF;
+		padding: 17px 20px 15px;
+		border: 1px solid #d8d8d8;
+		border-top:4px solid #f9b256;
+		border-bottom:2px solid #d8d8d8;
+		border-radius: 3px;
+		text-align: left;
+	}
+
+	.card ul 
+	{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.card li 
+	{
+		font:  15px/1.5;
+		font-family: 'Roboto Slab', serif;
+		border-bottom: 1px solid #dadada;
+		display: block;
+
+
+		-webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+		-moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+		-o-transition: font-size 0.3s ease, background-color 0.3s ease;
+		-ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+		transition: font-size 0.3s ease, background-color 0.3s ease;
+	}
+
+	.card li:last-child 
+	{
+		border: none;
+	}
+
+	.card li a
+	{
+		text-decoration: none;
+		color: #000;
+		display: inline;
+	}
+
+	.card li:hover 
+	{
+		background: #f6f6f6;
+	}
+
+	.card .section_title
+	{
+		color: #222;
+		display: inline-block;
+		font-family: 'Raleway', sans-serif;
+		font-size: 25px;
+		
+
+	}
+
+
+	.subcatagory
+	{
+		color: #262626;
+		padding-top: 10px;
+		font-family: 'Raleway', sans-serif;
+		font-size: 16px;
+		
+		line-height:40px;
+		border-bottom: 1px solid #aaa;
+		margin-bottom: 12px;
+		font-weight: bold;
+	}
+
+	.card p
+	{
+		font-size: medium;
+		font-family: 'Roboto Slab', serif;
+
+	}
+	.acomplishments
+	{
+		font-size: 18px;
+	}
+
+	.card img 
+	{
+		margin-top:20px;
+	}
+
+/*-------talk bubble------*/
+	.talkbubble 
+	{
+		
+		font-family: 'Raleway', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
+		font-weight:600;
+		
+		background-color:white;
+		padding:10px;
+		width: 300px;
+		top:240px;
+		position:absolute;
+
+		border:1px solid #d8d8d8;
+		border-bottom:2px solid #d8d8d8;
+		border-top:4px solid rgb(50,50,150);
+		-moz-border-radius:    3px;
+		-webkit-border-radius: 3px;
+		border-radius:         3px;
+	}
+
+	.talkbubble p 
+	{
+		font-size: 14px;
+		font-family: 'Roboto Slab', serif;
+
+	}
+	.talkbubble:before {
+	   content:"";
+	   position: absolute;
+	   right: 30%;
+	   top: -21px;
+	   width: 0;
+	   height: 0;
+	   border-left: 0px solid transparent;
+	   border-bottom: 21px solid rgb(50,50,150);
+	   border-right: 32px solid transparent;
+	}
+
+	.person_speeking
+	{
+		padding-left:12px;
+		display: inline-block;
+		width:330px;
+		height:355px;
+		position: relative;
+	}
+		.person
+	{
+		margin-top:20px;
+		float:left;
+		border-radius: 100px;
+ 		box-shadow: 0 0 40px #222 inset;
+ 		overflow:hidden;
+ 		width:200px;
+ 		height:200px;
+ 		background-image: url('../home/media/me.jpg')
+	}
+
+/*---------button---------*/
+	.button
+	{
+		display:inline-block;
+		text-decoration: none;
+		color:white;
+		text-shadow:0 1px 1px rgba(20,20,20,.3);
+		text-align:center;
+		padding-left:30px;
+		padding-right:30px;
+		padding-bottom:10px;
+		padding-top:10px;
+		background-color:#D84937;
+		border-radius:4px;
+		font-weight:900;
+		border:2px solid rgba(0,0,0,0);
+		transition:border .35s;
+		margin:20px;
+		
+	}
+	.button:hover
+	{
+		border:2px solid rgba(0,0,0,.5);
+	}
+

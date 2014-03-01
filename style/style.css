@@ -1,0 +1,554 @@
+body
+{
+	background-color: #FAFAFA;
+	margin: 0px;
+	color: #222;
+	font-family: 'Roboto Slab', serif;
+	font-size: 19px;
+	font-weight: 300;
+	overflow-x:hidden;
+
+}
+
+#content
+{
+	position: relative;
+	top:43px;
+
+}
+
+
+/* the correct blue 6b97cf
+
+bright orange C0392B*/
+
+
+
+/*h*/
+	h1,h2,h3
+	{
+		font-family: 'Raleway', sans-serif;
+		font-weight: 200;
+	}
+
+	h1
+	{
+		font-size:75px;
+	}
+
+	h2
+	{
+		font-size:50px;
+	}
+
+
+	h3
+	{
+		font-size:25px;
+	}
+
+/*Links*/
+	a
+	{
+		position: relative;
+		display: inline-block;
+	}
+
+	a span
+	{
+		color:#6b97cf;
+		text-decoration: none;
+		display:inline-block;
+		-webkit-transition: all .5s;
+		-moz-transition: all .5s;
+		-o-transition: all .5s;
+		transition: all .5s;
+		font-weight: bold;
+	}
+
+	a:hover > span
+	{
+		color:#6b97cf;
+		-webkit-transform:rotate(-360deg);
+		-moz-transform:rotate(-360deg); 
+		-o-transform:rotate(-360deg);
+		transform:rotate(-360deg);
+	}
+
+	a::after
+	{
+		position: absolute;
+		width:0px;
+		top:100%;
+		left:0px;
+		content: '';
+		width:0%;
+		height:2px;
+		background-color: #222;
+		transition:all .3s;
+	}
+
+	a:hover::after
+	{
+		background-color: #6b97cf;
+		width:100%;
+		height:2px;
+	}
+
+/*header*/
+	header
+	{
+		top:0px;
+		z-index: 1000;
+		background: #222;
+		display: block;
+		position: fixed;
+		width:100%;
+		text-align: center;
+	}
+
+	header ul
+	{
+		box-shadow: 0 0px 25px #000;
+		padding: 0px;
+		margin:0px;
+	}
+
+	header li
+	{
+		transition:all .4s;
+		display: inline-block;
+		color: #EEE;	
+		font-size: 20px;
+		padding: 10px;
+		font-family: 'Raleway', sans-serif;
+	}
+	header a
+	{
+		text-decoration:none;
+	}
+
+	header li:hover
+	{
+		background-color: rgba(255,255,255,.15);
+		color:#6b97cf;
+	}
+
+	header a::after
+	{
+		height:0px;
+	}
+
+/*footer*/
+	footer
+	{
+		/*box-shadow: 0 0 25px #000;*/
+		position: relative;
+		display: block;
+		width:100%;
+		text-align: center;
+	}
+
+	footer ul
+	{
+		padding: 0px;
+		margin:0px;
+	}
+
+	footer li
+	{
+		line-height: 100%;
+		border-radius: 100px;
+		display: inline-block;
+		height:50px;
+		width:50px;
+		color: #EEE;	
+		font-size: 50px;
+		padding: 10px;
+		margin:10px;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	footer img
+	{
+		width:70px;
+		height:70px;
+		border-radius: 100px;
+		border:5px solid white;
+		-webkit-transition: all .3s;
+		-moz-transition: all .3s;
+		-o-transition: all .3s;
+		transition: all .3s;
+
+	}
+
+	footer img:hover
+	{
+		/*box-shadow: 5px 5px 10px #222;*/
+
+	}
+	footer a
+	{
+		text-decoration:none;
+	}
+
+	footer a:after
+	{
+		content:none;
+	}
+
+
+	footer span
+	{
+		position: relative;
+	}
+
+	footer span:hover:after
+	{
+		visibility: visible;
+		left:0%;
+		background: #6b97cf;
+		color: #fff;
+	}
+
+
+	footer span:after
+	{
+		font-size: 20px;
+		font-weight: 300;
+		/*width:100%;*/
+		padding-left:20px;
+		padding-right:20px;
+		top:-60px;
+		background: rgba(0,0,0,0);
+		color: rgba(0,0,0,0);
+		content:attr(name);
+		position: absolute;
+		left: -10%;
+		z-index: 98;
+		visibility: hidden;
+		-webkit-transition:all .4s;
+		-moz-transition:all .4s;
+		-ie-transition:all .4s;
+		-o-transition:all .4s;
+		transition:all .4s;
+	}
+
+	footer span:before
+	{
+		margin:0px auto;
+		position: absolute;
+		top:-10px;
+		left:10px;
+		content:"";
+		width: 0; 
+		height: 0; 
+		border-style: solid;
+		border-width: 0px 6.5px 0 6.5px;
+		border-color: rgba(0,0,0,0) transparent transparent transparent;
+		-webkit-transition:all .4s;
+		-moz-transition:all .4s;
+		-ie-transition:all .4s;
+		-o-transition:all .4s;
+		transition:all .4s;
+		z-index: 100;
+	}
+
+	footer span:hover:before
+	{
+		left:35px;
+		border-width: 7px 6.5px 0 6.5px;
+		border-color: #6b97cf transparent transparent transparent;
+	}
+
+/*title*/
+	#title
+	{
+		width:100%;
+		text-align: center;
+		padding-top:50px;
+		padding-bottom:50px;
+		/*box-shadow: 0 0 10px #222;*/
+	}
+
+	#title p
+	{
+		padding-top:20px;
+		display:inline-block;
+		font-size:20px;
+		font-weight:400;
+		width:80%;
+		max-width:700px;
+		text-align:left;
+	}
+
+	#title img
+	{
+		border-radius: 150px;
+		box-shadow: -5px 5px 15px #333;
+	}
+
+	.title
+	{
+		position: relative;
+		display: inline-block;
+		transition:all .4s;
+	}
+	.title:hover,.title:hover a span
+	{
+		color:#6b97cf;
+	}
+
+	.title a span
+	{
+		color:#222;
+		font-weight: 200;
+	}
+
+	.title a::after
+	{
+		height:0px;
+	}
+
+/*--- the icons and there container--- */
+	#icons
+	{
+		height: 50px;
+		text-align: center;
+	}
+
+	#icons img
+	{
+		position: relative;
+		display: inline;
+		margin-left:20px;
+		margin-right:20px;
+		width:50px;
+		height:50px;
+		cursor: pointer;
+		z-index:100;
+	}
+
+	#icons span
+	{
+		position: relative;
+	}
+
+	#icons span:hover:after
+	{
+		visibility: visible;
+		left:0%;
+		background: #6b97cf;
+		color: #fff;
+	}
+
+	#icons span:after
+	{
+		font-size: 20px;
+		font-weight: 300;
+		width:100%;
+		padding-top:10px;
+		padding-bottom:10px;
+		top:-90px;
+		background: rgba(0,0,0,0);
+		color: rgba(0,0,0,0);
+		content:attr(name);
+		position: absolute;
+		left: -10%;
+		z-index: 98;
+		visibility: hidden;
+		-webkit-transition:all .4s;
+		-moz-transition:all .4s;
+		-ie-transition:all .4s;
+		-o-transition:all .4s;
+		transition:all .4s;
+	}
+
+	#icons span:before
+	{
+		margin:0px auto;
+		position: absolute;
+		top:-44px;
+		left:10px;
+		content:"";
+		width: 0; 
+		height: 0; 
+		border-style: solid;
+		border-width: 0px 6.5px 0 6.5px;
+		border-color: rgba(0,0,0,0) transparent transparent transparent;
+		-webkit-transition:all .4s;
+		-moz-transition:all .4s;
+		-ie-transition:all .4s;
+		-o-transition:all .4s;
+		transition:all .4s;
+		z-index: 100;
+	}
+
+	#icons span:hover:before
+	{
+		left:40px;
+		border-width: 7px 6.5px 0 6.5px;
+		border-color: #6b97cf transparent transparent transparent;
+	}
+
+/*--- the triangle and it's container ---*/
+	#triangle_slider
+	{
+		padding-top:10px; 
+		height: 23px;
+	}
+
+	#triangle
+	{
+		margin:0px auto;
+		position: relative;
+		left:-95px;
+		content:"";
+		width: 0; 
+		height: 0; 
+		border-left: 23px solid transparent;
+		border-right: 23px solid transparent;
+		border-bottom: 23px solid #FFF;
+		-webkit-transition:all .4s;
+		-moz-transition:all .4s;
+		-ie-transition:all .4s;
+		-o-transition:all .4s;
+		transition:all .4s;
+		z-index: 100;
+	}
+
+/*--- the card holder ---*/
+	#card
+	{
+		-webkit-transition:all  .4s;
+		-moz-transition:all  .4s;
+		-ie-transition:all  .4s;
+		-o-transition:all  .4s;
+		transition:all  .4s;
+		position: relative;
+		width:100%;
+		padding: 0px;
+		max-width: 900px;
+		margin:0px auto;
+		margin-bottom:100px;
+		border-radius: 3px;
+		overflow: hidden;
+		background-color: #fff;
+		box-shadow: 0 0 50px #222;
+		border: 5px solid white;
+	}
+
+
+
+	#card p
+	{
+		padding:20px;
+		font-size: 20px;
+		margin-right:40px;
+		font-family: 'Roboto slab', sans-serif;
+		font-weight: 300;
+	}
+
+	#card h2
+	{
+		color:#222;
+		padding:20px;
+		padding-bottom:0px;
+		margin-left:20px;
+		font-weight: 300;
+		font-size: 40px;
+	}
+
+	#card img
+	{
+		max-height: 100%;
+		margin:20px;
+		border:4px solid #222;
+		box-shadow:0 0 20px rgba(0,0,0,.6);
+		float:right;
+	}
+
+	@media (max-width: 500px) {
+  	#card img{
+  		display: block;
+  		float:none;
+  		width:85%;
+  	}
+  	}
+
+/*---the style of the two halves of the card*/
+	.left
+	{
+		float:left;
+		width:50%;
+		padding: 0px;
+		padding-right:30px;
+		padding-bottom:20px;
+
+	}
+
+	.right
+	{
+		float:right;
+		width:50%;
+		padding-left:30px;
+		padding-bottom:20px;
+		height: 100%;
+		background: url('http://imgur.com/r/earthporn/Vesu4Dr');
+	}
+
+/*---Individual card styles---*/
+	.content
+	{
+		position: absolute;
+		background-color: #FFF;
+		-webkit-transition:all 1s;
+		-moz-transition:all 1s;
+		-ie-transition:all 1s;
+		-o-transition:all 1s;
+		transition:all 1s;
+	}
+
+		@media (max-width: 500px) {
+
+		.content{
+					-webkit-transition:all 0s;
+		-moz-transition:all 0s;
+		-ie-transition:all 0s;
+		-o-transition:all 0s;
+		transition:all 0s;
+
+		}
+	}
+
+	.content img
+	{
+		height: 95%;
+	}
+
+	#code
+	{
+		top:0%;
+	}
+
+	#science
+	{
+		top:100%;
+	}
+
+	#art
+	{
+		top:200%;
+	}
+
+
+
+
+
+.t
+{
+	overflow: hidden;
+	height:100%;
+	width:50%;
+	float:right;
+}
