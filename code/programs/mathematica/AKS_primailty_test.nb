@@ -1,0 +1,84 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2264,         75]
+NotebookOptionsPosition[      1953,         59]
+NotebookOutlinePosition[      2294,         74]
+CellTagsIndexPosition[      2251,         71]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"isPrime", "[", "n_", "]"}], ":=", " ", 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{
+       RowBox[{"Mod", "[", 
+        RowBox[{
+         RowBox[{"CoefficientList", "[", 
+          RowBox[{
+           RowBox[{"Expand", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"x", "-", "1"}], ")"}], "^", "n"}], "-", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"x", "^", "n"}], "-", "1"}], ")"}]}], "]"}], ",", 
+           "x"}], "]"}], ",", "n"}], "]"}], ",", "0", ",", "Infinity"}], 
+      "]"}], " ", "\[Equal]", 
+     RowBox[{"{", "}"}]}], ",", "True", ",", "False"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"isPrime", "[", "104729", "]"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.600685482030142*^9, 3.6006855248717704`*^9}, {
+  3.6006856193969364`*^9, 3.600685654285249*^9}, {3.60068584290629*^9, 
+  3.600685878156846*^9}, {3.6007345921011286`*^9, 3.600734598689497*^9}, {
+  3.6007346490038843`*^9, 3.6007346517627144`*^9}, {3.6007347219222608`*^9, 
+  3.6007348289642897`*^9}, {3.600734899542119*^9, 3.6007351330160265`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.6007350920148215`*^9, 3.6007351384856553`*^9}}]
+}, Open  ]]
+},
+WindowSize->{707, 816},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 1254, 31, 132, "Input"],
+Cell[1836, 55, 101, 1, 30, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

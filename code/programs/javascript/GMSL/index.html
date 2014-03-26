@@ -1,218 +1,41 @@
-<html onload = 'plot()'>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,700' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width, height=device-height">
-<style type="text/css">
-body
-{
-	margin:0px;
-	padding:0px;
-	background-color: #FEFEFE;
-	text-align: center;
-}
-svg
-{
-	padding:10px;
-	box-shadow: 0 0 25px #222;
-	position: relative;
-	top:35px;
-	margin:0px auto;
-}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<meta name="viewport" content="width=device-width, height=device-height">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="normalize.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src = 'plot.js'></script>
 
-/*h*/
-	h1,h2,h3
-	{
-
-		font-family: 'Raleway', sans-serif;
-		font-weight: 200;
-		margin:0px auto;
-	}
-
-	h1
-	{
-		padding-top: 25px;
-		font-size:50px;
-	}
-
-	h2
-	{
-		font-size:37px;
-
-	}
-
-	h3
-	{
-		font-size:25px;
-	}
-
-	button
-	{
-		padding:15px;
-		font-family: 'Raleway', sans-serif;
-		font-size: 20px;
-		position: relative;
-		top:75px;
-		background-color:#EEE;
-		box-shadow: 0 0 10px #222;
-		border: none;
-		transition:all .3s;
-		border-radius: 3px;
-		font-weight: 400;
-		cursor: pointer;
-	}
-	button:hover
-	{
-		box-shadow: 0 0 1px #222;
-
-	}
-</style>
-<body onload = 'plot()'>
-	<h1>Global deviation from mean sea level</h1>
-	<h3> in milimeters </h3>
-	<div id = 'plot'></div>
-<script type="text/javascript">
-	var dataset = [];
-
-	d3.csv("GMSL.csv", function(data) 
-	{
-		dataset=data
-		for (var i = data.length - 1; i >= 0; i--) 
-		{
-			dataset[i]["year"] = +dataset[i]["year"]
-			dataset[i]["GMSL"] = +dataset[i]["GMSL"]
-			dataset[i]["error"] = +dataset[i]["error"]
-		};
-	});
-
-	var w = window.innerWidth-100;
-	var h=window.innerHeight-300;
-	var svg = d3.select("#plot").append("svg:svg")
-		.attr("width", w)
-		.attr("height", h)
-		.style("pointer-events", "all")
-		.style("background-color",'#EEE')
-		.on("mousemove",showVal)
-		.on('load',plot);
-
-	Xaxis()
-	Yaxis()
-	vals = [-100,-75,-50,-25,0,25,50,75,100,125]
-	svg.selectAll("text")
-		.data(vals)
-		.enter()
-		.append("text")
-		.attr("x",-100)
-		.attr("y",function(i){return(cy(i));})
-		.text(function(i){return(i);})
-		.attr("fill","#222")
-		.attr("font-family","'Raleway', sans-serif;")
-		.attr("font-size", "20px")
-		.attr("text-anchor","right")
-		.transition()
-		.delay(function(i) { return i * 10; })
-		.attr("x",0);
-
-	function plot()
-	{
-		svg.selectAll("line")
-		.data(dataset)
-		.enter()
-		.append("line")
-		.attr("x1",function(d){return(cx(d["year"]));})
-		.attr("x2",function(d){return(cx(d["year"]));})
-		.attr("y1",function(d){return(cy(d["GMSL"])-radius(d)+h+200);})
-		.attr("y2",function(d){return(cy(d["GMSL"])+radius(d)+h+200);})
-
-		.attr("stroke","#4682B4")
-		.transition()
-		.delay(function(d, i) { return i * .5; })
-		.attr("y1",function(d){return(cy(d["GMSL"])-radius(d));})
-		.attr("y2",function(d){return(cy(d["GMSL"])+radius(d));})
-	};
-	function Xaxis()
-	{
-		svg.append("line")
-		.attr("x1",40)
-		.attr("x2",w+10)
-		.attr("y1",cy(0))
-		.attr("y2",cy(0))
-		.attr("stroke","#222")
-	};
-
-	function Yaxis()
-	{
-		svg.append("line")
-		.attr("x1",40)
-		.attr("x2",40)
-		.attr("y1",-10)
-		.attr("y2",h+10)
-		.attr("stroke","#222")
-	};
-	function slowDown(v)
-	{
-		val = window.setTimeout(function(){return(v)},200)
-		return(val)
-	};
-
-	function cx(v)
-	{
-		var x = 40+(v-1870.0417)/(2001.9583-1870.0417)*(w-40);
-		return(x)
-	};
-
-	function cy(v)
-	{
-		var y = (-(h-50)*((v+100)/(220))+(h-25));
-		return(y)
-	};
-	function radius(d)
-	{		
-		var r = (h-50)*d["error"]/220;
-		return(r)
-	};
-	svg.append("text")
-		.attr("x",100)
-		.attr("y",100)
-		.attr('id','point')
-		.text("(date,mean sea level)")
-		.attr("fill","#222")
-		.attr("font-family","'Raleway', sans-serif;")
-		.attr("font-size", "20px")
-		.attr("text-anchor","right");
-
-	function showVal()
-	{
-		plot()
-		m = d3.mouse(this);
-		if (m[0]>40)
-		{
-		year = (m[0] - 40)/(w - 40)*(2001.9583 - 1870.0417) + 1870.0417
-		for (var i = dataset.length - 1; i >= 0; i--) 
-		{
-			y = dataset[i]["year"]
-			if (Math.abs(year-y)<.05)
-			{
-				disp_y = (y-1970)*3.171*Math.pow(10,10)
-				d = new Date(disp_y)
-				date = d.toDateString()
-				console.log(date)
-				day = date.substring(0,3)
-				dayN = date.substring(8,10);
-				date = date.replace(dayN,"")
-				console.log(date)
-				date = date.replace(day,"")
-				console.log(date)
-
-				
-				d3.select("#point")
-				.text(date+' , '+String(dataset[i]["GMSL"])+'\xB1'+String(dataset[i]["error"])+' mm')
-			}
-		};
-		};
-
-		
-	};
-
-</script>
-</body>
+	</head>
+	<body>
+		<header> <h1>Title of Page</h1></header>
+		<div id = 'container'>
+			<div id = 'chart'>
+				<div id = 'plot_title' class = 'ribbon'><strong class="ribbon-content"><h2>Title of Plot</h2></strong></div>
+				<div id = 'plot'></div>
+			</div>
+			<div id = 'source'>
+				<a href = 'http://people.rit.edu/jth5162/pg/style2/'><span>s</span><span>o</span><span>u</span><span>r</span><span>c</span><span>e</span></a>
+			</div>
+			<div id = 'explanation'>
+				<h3>Bear Claw</h3>
+				<p>
+					Bear claw candy oat cake bear claw dessert. Powder icing muffin sweet roll cupcake jelly-o. Halvah cake chocolate cake chocolate bar cake apple pie. Marzipan gummies unerdwear.com gingerbread dessert macaroon powder. Jujubes carrot cake muffin. Cupcake biscuit biscuit.
+				</p>
+				<h3>Bear Claw</h3>
+				<p>
+					Fruitcake tootsie roll liquorice icing carrot cake brownie cookie liquorice gummies. Icing marshmallow sugar plum jelly beans chocolate cake tart jelly sesame snaps gummi bears. Topping marshmallow soufflé. Sesame snaps croissant cotton candy sugar plum jelly-o. Candy jelly dessert tootsie roll sweet roll chupa chups lemon drops sweet roll. Tiramisu wafer bear claw bonbon gummi bears tootsie roll dessert sesame snaps.
+				</p>
+				<h3>Bear Claw</h3>
+				<p>
+					Bear claw tiramisu fruitcake apple pie cookie toffee candy. Topping macaroon wafer candy canes oat cake toffee. Pastry wafer gummies. Bear claw sweet roll chocolate cookie chocolate muffin macaroon liquorice. Gummi bears cupcake muffin pastry gummi bears jelly. Sugar plum chocolate bar pastry. Pie cupcake candy canes. Lollipop sesame snaps lemon drops jelly chocolate biscuit sweet jelly beans. Dessert marshmallow soufflé jelly-o. Sweet roll gingerbread unerdwear.com unerdwear.com wafer brownie muffin carrot cake.
+				</p>
+			</div>
+		</div>
+		<footer></footer>
+	</body>
 </html>
