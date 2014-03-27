@@ -208,6 +208,12 @@ body
 	background-color: #FEFEFE;
 	text-align: center;
 }
+svg
+{
+	box-shadow: 0 0 25px #222;
+	position: relative;
+	margin:0px auto;
+}
 
 /*h*/
 	h1,h2,h3
