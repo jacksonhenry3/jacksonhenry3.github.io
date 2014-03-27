@@ -140,4 +140,4 @@ function showVal()
 	
 };
 
-document.onLoad = plot()
+document.onLoad = function(){plot()}
