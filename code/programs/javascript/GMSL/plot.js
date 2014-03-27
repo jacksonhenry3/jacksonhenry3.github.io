@@ -20,10 +20,6 @@ var svg = d3.select("#plot").append("svg:svg")
 	.style("background-color",'white')
 	.on("mousemove",showVal)
 	.on('load',plot);
-
-Xaxis()
-Yaxis()
-plot()
 vals = [-100,-75,-50,-25,0,25,50,75,100,125]
 svg.selectAll("text")
 	.data(vals)
@@ -140,4 +136,6 @@ function showVal()
 	
 };
 
-window.onLoad = function(){plot()}
+Xaxis()
+Yaxis()
+plot()
