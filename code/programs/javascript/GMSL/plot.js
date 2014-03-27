@@ -11,18 +11,19 @@ d3.csv("GMSL.csv", function(data)
 	};
 });
 
-var w = window.innerWidth-100;
-var h=window.innerHeight-300;
+var w = $("#plot").innerWidth();
+var h = $("#plot").innerHeight();
 var svg = d3.select("#plot").append("svg:svg")
 	.attr("width", w)
 	.attr("height", h)
 	.style("pointer-events", "all")
-	.style("background-color",'#EEE')
+	.style("background-color",'white')
 	.on("mousemove",showVal)
 	.on('load',plot);
 
 Xaxis()
 Yaxis()
+plot()
 vals = [-100,-75,-50,-25,0,25,50,75,100,125]
 svg.selectAll("text")
 	.data(vals)
@@ -139,3 +140,4 @@ function showVal()
 
 	
 };
+
