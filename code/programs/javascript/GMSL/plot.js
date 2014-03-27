@@ -83,8 +83,7 @@ function slowDown(v)
 };
 
 function cx(v)
-{
-	w =    
+{  
 	var body = d3.select("body");
     var svg = body.select("svg");
     w = svg.style("width"));
