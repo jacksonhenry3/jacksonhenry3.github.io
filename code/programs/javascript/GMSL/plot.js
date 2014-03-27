@@ -11,8 +11,8 @@ d3.csv("GMSL.csv", function(data)
 	};
 });
 
-var w = $("#plot").innerWidth();
-var h = $("#plot").innerHeight();
+var w = $("#plot").innerWidth()-20;
+var h = $("#plot").innerHeight()-20;
 var svg = d3.select("#plot").append("svg:svg")
 	.attr("width", w)
 	.attr("height", h)
@@ -23,6 +23,7 @@ var svg = d3.select("#plot").append("svg:svg")
 
 Xaxis()
 Yaxis()
+plot()
 vals = [-100,-75,-50,-25,0,25,50,75,100,125]
 svg.selectAll("text")
 	.data(vals)
@@ -109,7 +110,6 @@ svg.append("text")
 
 function showVal()
 {
-	plot()
 	m = d3.mouse(this);
 	if (m[0]>40)
 	{
