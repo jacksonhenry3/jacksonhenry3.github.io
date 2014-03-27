@@ -210,10 +210,9 @@ body
 }
 svg
 {
-	box-shadow: 0 0 25px #222;
 	position: relative;
 	margin:0px auto;
-	padding:20px;
+	padding:10px;
 }
 
 /*h*/
