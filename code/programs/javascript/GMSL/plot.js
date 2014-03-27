@@ -11,19 +11,18 @@ d3.csv("GMSL.csv", function(data)
 	};
 });
 
-var w = d3.select("#plot").innerWidth
-var h = d3.select("#plot").innerWidth
+var w = $("#plot").innerWidth();
+var h = $("#plot").innerHeight();
 var svg = d3.select("#plot").append("svg:svg")
 	.attr("width", w)
 	.attr("height", h)
 	.style("pointer-events", "all")
-	.style("background-color",'white')
+	.style("background-color",'#222')
 	.on("mousemove",showVal)
 	.on('load',plot);
 
 Xaxis()
 Yaxis()
-plot()
 vals = [-100,-75,-50,-25,0,25,50,75,100,125]
 svg.selectAll("text")
 	.data(vals)
@@ -83,20 +82,14 @@ function slowDown(v)
 };
 
 function cx(v)
-{  
-	var body = d3.select("body");
-    var svg = body.select("svg");
-    w = svg.style("width");
+{
 	var x = 40+(v-1870.0417)/(2001.9583-1870.0417)*(w-40);
 	return(x)
 };
 
 function cy(v)
 {
-		var body = d3.select("body");
-	    var svg = body.select("svg");
-	    h = svg.style("height");
-		var y = (-(h-50)*((v+100)/(220))+(h-25));
+	var y = (-(h-50)*((v+100)/(220))+(h-25));
 	return(y)
 };
 function radius(d)
@@ -116,6 +109,7 @@ svg.append("text")
 
 function showVal()
 {
+	plot()
 	m = d3.mouse(this);
 	if (m[0]>40)
 	{
@@ -145,4 +139,3 @@ function showVal()
 
 	
 };
-
