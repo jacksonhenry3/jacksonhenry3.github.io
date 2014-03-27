@@ -139,3 +139,5 @@ function showVal()
 
 	
 };
+
+document.onLoad = plot()
