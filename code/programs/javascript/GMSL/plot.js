@@ -17,7 +17,7 @@ var svg = d3.select("#plot").append("svg:svg")
 	.attr("width", w)
 	.attr("height", h)
 	.style("pointer-events", "all")
-	.style("background-color",'#222')
+	.style("background-color",'white')
 	.on("mousemove",showVal)
 	.on('load',plot);
 
