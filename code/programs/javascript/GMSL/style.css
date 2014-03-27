@@ -208,14 +208,6 @@ body
 	background-color: #FEFEFE;
 	text-align: center;
 }
-svg
-{
-	padding:10px;
-	box-shadow: 0 0 25px #222;
-	position: relative;
-	top:35px;
-	margin:0px auto;
-}
 
 /*h*/
 	h1,h2,h3
