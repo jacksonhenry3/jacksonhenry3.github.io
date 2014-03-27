@@ -213,7 +213,7 @@ svg
 	position: relative;
 	margin:0px auto;
 	padding:10px;
-	box-shadow:0 0 10px #222 inset;
+	box-shadow:0 0 10px rgba(0,0,0,.5) inset;
 }
 
 /*h*/
