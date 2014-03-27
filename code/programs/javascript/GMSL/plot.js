@@ -11,8 +11,8 @@ d3.csv("GMSL.csv", function(data)
 	};
 });
 
-var w = $("#plot").innerWidth();
-var h = $("#plot").innerHeight();
+var w = d3.select("#plot").innerWidth
+var h = d3.select("#plot").innerWidth
 var svg = d3.select("#plot").append("svg:svg")
 	.attr("width", w)
 	.attr("height", h)
