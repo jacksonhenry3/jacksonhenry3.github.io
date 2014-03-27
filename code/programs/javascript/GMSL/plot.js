@@ -138,4 +138,4 @@ function showVal()
 
 Xaxis()
 Yaxis()
-window.setTimeout(plot(),100)
+plot()
