@@ -84,13 +84,20 @@ function slowDown(v)
 
 function cx(v)
 {
+	w =    
+	var body = d3.select("body");
+    var svg = body.select("svg");
+    w = svg.style("width"));
 	var x = 40+(v-1870.0417)/(2001.9583-1870.0417)*(w-40);
 	return(x)
 };
 
 function cy(v)
 {
-	var y = (-(h-50)*((v+100)/(220))+(h-25));
+		var body = d3.select("body");
+	    var svg = body.select("svg");
+	    h = svg.style("height"));
+		var y = (-(h-50)*((v+100)/(220))+(h-25));
 	return(y)
 };
 function radius(d)
@@ -110,7 +117,6 @@ svg.append("text")
 
 function showVal()
 {
-	plot()
 	m = d3.mouse(this);
 	if (m[0]>40)
 	{
