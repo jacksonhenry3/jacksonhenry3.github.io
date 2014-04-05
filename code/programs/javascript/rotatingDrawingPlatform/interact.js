@@ -14,7 +14,7 @@ svgHeight = 500
 var svgContainer = d3.select("#a").append("svg")
 .attr("width", svgWidth)
 .attr("height", svgHeight)
-.on("ontouchstart" in document ? "touchmove" :addData);
+.on("ontouchstart" in document ? "touchmove" : "mousemove", addData);
 
 //The line SVG Path we draw
 var line1 = svgContainer.append("path")
