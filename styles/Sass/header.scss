@@ -1,0 +1,103 @@
+header
+{
+	top:0;
+	position: fixed;
+	height: 75px;
+	width:100%;
+	font-size:20px;
+	background-color: #FEFEFE;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	z-index:100;
+}
+
+section h2 
+{
+	padding:20px;
+	font-weight: 400;
+	font-size: 32px;
+}
+
+header ul
+{
+	list-style-type: none;
+	float:right;
+}
+
+header ul li
+{
+	font-weight:500;
+	text-align: center;
+	width:100px;
+	display: inline-block;
+	padding:20px;
+	margin:5px;
+	color:#222;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition:all .5s;
+}
+
+
+
+header ul li::after
+{
+	position: absolute;
+	content:'';
+	top:32px;
+	left:70px;
+	width:0px;
+	height: 0px;
+	z-index: -1;
+	transition:all .5s;
+	border-radius: 100px;
+	background-color: #42c096;
+}
+
+
+
+header ul li:hover::after
+{
+	top:-45px;
+	left:-7px;
+	width:154px;
+	height:154px;
+	background-color: #42c096;
+	color:white;
+}
+
+header ul li:hover
+{
+	color:white;
+}
+
+@media (max-width: 650px) {
+  header ul li {
+  	padding:0px;
+  	padding-top:20px;
+  	padding-bottom:20px;
+
+  	margin:0px;
+  	margin-top:5px; 
+  	margin-left:10px;
+    width:70px;
+    font-size:14px;
+  }
+
+  header
+  {
+  	height:66px;
+  }
+  header ul li::after
+  {
+  	left:35px;
+  }
+
+  header ul li:hover::after
+  {
+  	top:-45px;
+		left:-30px;
+  }
+
+
+}

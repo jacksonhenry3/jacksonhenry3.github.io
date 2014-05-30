@@ -1,0 +1,74 @@
+$green : #42c096;
+$black: #222;
+$bodyFont: 'Roboto Slab', serif;
+$titleFont: 'Raleway', sans-serif;
+
+@import 'header';
+@import 'links';
+@import 'section';
+@import 'form';
+@import 'chevronAnimation';
+@import 'slider';
+@import 'button';
+@import 'infographics';
+
+
+html,body,*
+{
+	margin:0px;
+	padding:0px;
+}
+
+body
+{
+	overflow-x:hidden;
+	height:100%;
+	color:$black;
+	font-family:$bodyFont;
+	background-color: #F5F5F5;
+}
+
+
+
+
+h1,h2,h3,ul
+{
+	font-family:$titleFont;
+}
+
+p 
+{
+	margin-top:20px;
+	margin-left:65px;
+	margin-right:65px;
+	text-align: left;
+	font-size:20px;
+}
+
+@media (max-width: 650px) {
+  p 
+	{
+
+		margin-left:25px;
+		margin-right:25px;
+	}
+}
+
+
+#container
+{
+	margin:0px auto;
+	margin-top:75px;
+}
+
+ul
+{
+	display: inline-block;
+	text-align: left;
+	margin:0px auto;
+	list-style-type: square;
+}
+.hidden
+{
+  display: none;
+}

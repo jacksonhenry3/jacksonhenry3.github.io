@@ -1,0 +1,21 @@
+\documentclass[12pt]{article}
+\usepackage{aahomework}
+
+\title{two's complement subtraction}
+\author{Jackson Henry}
+\date{4/30/2014}
+
+
+\begin{document}
+\maketitle
+
+\section{Proof that it works}
+\begin{proof}
+if $n,m$ are binary numbers with $k$ digits and $inv(n)$ is the bitwise inverse of $n$ (also of $k$ digits) then $s = n+inv(n)$ is the largest possible binary number with $k$ digits (I.E. all digits are 1). if we consider $s+1$ we see that it must be $2^{(k)}$. however we are working with $k$ bits only and therefore $2^{(k)}=0$. this tells us that $inv(n)+1 = \minus n$ (becouse $n+inv(n)+1=0$) when working with $k$ bits. Therefor $m\minus n=m+inv(n)+1$.
+\end{proof}
+
+\section{example}
+if $m = 1100$ $n = 0110$ then $inv(n) = 1001$. This means that $s = 1111$. Therfore $s+1=10000$, however becouse we are working in four bits the cary bit is lost so $s+1 = 0000$. written as one equation we can see that $0110+1001+1=0000$ This means that $inv(n)+1=1001+1=1010$ is the addative inverse of $n$ in $4$ bits I.E. $inv(n)+1=\minus n$. Therfore we can write that $m\minus n=m+inv(n)+1$ or $1100+1010=10110$, but we only consider $4$ bits so $1100+1010=0110=1100\minus 0110$.
+
+
+\end{document}

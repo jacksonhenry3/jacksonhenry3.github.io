@@ -1,0 +1,111 @@
+button
+{
+	outline: 0;
+	font-weight:500;
+	text-align: center;
+	width:140px;
+	display: inline-block;
+	padding:20px;
+	margin:5px;
+	color:#222;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition:all .5s;
+	font-size:20px;
+	border:0;
+	background-color:$green;
+	z-index:0;
+	color:white;
+
+	font-weight:100;
+	font-family:$bodyFont;
+}
+
+
+button::after
+{
+	position: absolute;
+	content:'';
+	top:32px;
+	left:70px;
+	width:0px;
+	height: 0px;
+	z-index: -1;
+	transition:all .5s;
+	border-radius: 100px;
+	background-color: #42c096;
+}
+
+button:hover::after
+{
+	top:-45px;
+	left:-7px;
+	width:154px;
+	height:154px;
+	background-color: rgba(255,255,255,.25);
+	color:white;
+}
+
+
+button::before
+{
+	position: absolute;
+	content:'';
+	top:27px;
+	left:65px;
+	width:10px;
+	height: 10px;
+	z-index: -1;
+	transition:all .3s;
+	border-radius: 100px;
+	background-color: #42c096;
+}
+
+button:active::before
+{
+	top:-45px;
+	left:-7px;
+	width:154px;
+	height:154px;
+	background-color: rgba(0,0,0,.25);
+	color:white;
+}
+
+
+@media (max-width: 650px) {
+  button {
+  	padding:0px;
+  	padding-top:20px;
+  	padding-bottom:20px;
+
+  	margin:0px;
+  	margin-left:10px;
+    width:90px;
+    font-size:16px;
+	 }
+
+	  button::after
+	{
+		top:32px;
+		left:45px;
+	}
+
+	button:hover::after
+	{
+		top:-45px;
+		left:-30px;
+	}
+
+  button::before
+	{
+		top:32px;
+		left:45px;
+	}
+
+	button:active::before
+	{
+		top:-45px;
+		left:-30px;
+	}
+}

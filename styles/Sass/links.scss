@@ -1,0 +1,48 @@
+a
+{
+	color:$green;
+	position: relative;
+	text-decoration:none;
+	transition:all .5s;
+	display: inline-block;
+}
+
+p a,h3 a
+{
+	font-weight:bold;
+	z-index:10;
+	padding:2px;
+
+}
+
+p a:after,h3 a:after
+{
+	position: absolute;
+	content:'';
+	transition:all .3s;
+	border-radius: 100px;
+	background-color: #42c096;
+	overflow:hidden;
+	left:50%;
+	top:50%;
+	width:0;
+	height:0;
+	z-index:-1;
+}
+p a:hover:after,h3 a:hover:after
+{
+	top:0%;
+	left:-10%;
+	width:120%;
+	height:100%;
+}
+
+p a:hover,,h3 a:hover
+{
+	overflow:visible;
+}
+
+p a:hover,h3 a:hover
+{
+	color:white;
+}

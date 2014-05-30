@@ -1,0 +1,34 @@
+.chevron
+{
+	cursor: pointer;
+	font-family: serif;
+	position:relative;
+	top:0px;
+	-webkit-animation:bounce 3s; /* Chrome, Safari, Opera */
+	animation:bounce 3s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-transform: rotate(90deg);
+	animation-iteration-count: infinite;
+	transform: rotate(90deg);
+	padding:10px;
+	margin-top:50px;
+	font-size:80px;
+	letter-spacing:-15px;
+	display: inline-block;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bounce
+{
+	0%,50%{top:0px;color:#222;}
+	25% {top:10px; color:#42c096;}
+	100%{color:#222;}
+}
+
+/* Standard syntax */
+@keyframes bounce
+{
+	0%,50%{top:0px;color:#222;}
+	25% {top:10px; color:#42c096;}
+	100%{color:#222;}
+}

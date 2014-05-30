@@ -1,4 +1,0 @@
-$RecursionLimit = 10000;
-f[n_, 0] := 1
-f[n_, recrusinoDepth_] := 1/(1 + f[n, recrusinoDepth - 1])
-\[Phi] = N[f[1, 1000] + 1, 400]

@@ -1,4 +1,0 @@
-PieChart[CountryData[#, "Population"], ImageSize -> 1000,
-   ChartStyle -> "DarkRainbow",
-   ChartLabels ->
-    Placed[CountryData[#, "Name"], "RadialCallout"]] &["G8"]

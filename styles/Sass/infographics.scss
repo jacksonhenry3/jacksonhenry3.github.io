@@ -1,0 +1,64 @@
+#a,#b,#webProjects,#computerSkillContainer
+{
+	transition:all .5s;
+	opacity:0;
+	position: relative;
+}
+svg
+{
+    margin:50px;
+}
+
+@media (max-width: 650px) {
+  svg
+{
+    margin:10px;
+}
+}
+
+
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst
+{
+from {-webkit-transform: translate(100px, 100px) rotate(0deg);}
+to {-webkit-transform: translate(100px, 100px) rotate(360deg);}
+}
+
+/* Standard syntax */
+@keyframes myfirst
+{
+from {background: red;}
+to {background: yellow;}
+}
+
+
+
+.skill
+{
+margin:20px;
+
+}
+
+.experienceBar {
+    -webkit-animation: myfirst .8s;
+    -webkit-animation-timing-function:ease-in-out;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    -moz-transform: translate(100px, 100px) rotate(0deg);
+    -ms-transform: translate(100px, 100px) rotate(0deg);
+    -o-transform: translate(100px, 100px) rotate(0deg);
+    -webkit-transform: translate(100px, 100px) rotate(0deg);
+    transform: translate(100px, 100px) rotate(0deg)
+    }
+
+.skill:hover .experienceBar {
+    -moz-transform: translate(100px, 100px) rotate(360deg);
+    -ms-transform: translate(100px, 100px) rotate(360deg);
+    -o-transform: translate(100px, 100px) rotate(360deg);
+    -webkit-transform: translate(100px, 100px) rotate(360deg);
+    transform: translate(100px, 100px) rotate(360deg)
+    }

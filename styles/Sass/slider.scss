@@ -1,0 +1,216 @@
+.slider
+{
+	position: relative;
+	left:0px;
+}
+
+
+.slider h2
+{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	line-height: 0;
+	text-align: center;
+}
+
+.projectDisplay
+{
+	position: relative;
+	margin-top:20px;
+	white-space: nowrap;
+	width:100%;
+	background-color: #42c096;
+}
+
+
+
+.projectDisplay::before
+{
+	position: absolute;
+	content:'';
+	top:-20px;
+	left:0;
+	right:0;
+	width: 1px; 
+	height: 0;
+	margin:0px auto; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid #42c096;
+
+}
+
+
+.project
+{
+	display: inline-block;
+    position:relative;
+    width:300px;
+    height:300px;
+    cursor:pointer;
+    margin:50px;
+    transition:all .4s;
+    background:rgba(0,0,0,.4);
+}
+
+.project::after
+{
+    position:absolute;
+    background:rgba(0,0,0,.1);
+    content:'';
+    transition:all .4s;
+     
+    top:0px;
+    left:0px;
+    width:300px;
+    height:300px;
+    
+}
+
+.project:hover::after
+{
+    top:150px;
+    left:150px;
+    height:0px;
+    width:0px;
+    border-radius:100px; 
+
+}
+
+/* ribbon style */
+
+  .ribbon {
+  	color:white;
+	background-color:  #53d1a7;	height: 40px;
+	width: 340px;
+	position: absolute;
+	top:70px;
+	float:left;
+	left:-20px;
+	z-index: 2;
+	transition:all .5s;
+}
+
+
+
+  .ribbon::after,
+  .ribbon::before {
+  	z-index:1;
+  	content:'';
+	position: absolute;
+	border-style:solid;
+	height:0px;
+	width:0px;
+}
+
+
+
+  .ribbon::after{
+	top: -10px;
+	left: 0px;
+	border-color: transparent  #20a074 transparent transparent;
+	border-width: 10px 20px 0 0;
+}
+
+
+  .ribbon::before {
+	top: -10px;
+	left: 320px;
+	border-color: transparent transparent transparent  #20a074;
+	border-width: 10px 0 0 20px;
+}
+
+
+/*-------------------------------------------*/
+/* ribbon style */
+
+ .ribbon-wrapper {
+ 	width:100px;
+ 	height: 500px;
+	position: relative;
+	background-color: red;
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+  .ribbon-front {
+	background-color: #2222E1;	height: 40px;
+	width: 140px;
+	position: relative;
+	left:-20px;
+	z-index: 2;
+}
+
+  .ribbon-front
+{/*
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+	-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);*/
+}
+
+  .ribbon-edge-topleft,
+  .ribbon-edge-topright{
+	position: absolute;
+	z-index: 1;
+	border-style:solid;
+	height:0px;
+	width:0px;
+}
+
+
+  .ribbon-edge-topleft {
+	left: -20px;
+	border-color: transparent #FF0022 transparent transparent;
+}
+
+  .ribbon-edge-topleft {
+	top: -10px;
+	border-width: 10px 20px 0 0;
+}
+
+
+  .ribbon-edge-topright {
+	left: 100px;
+	border-color: transparent transparent transparent #FF0022;
+}
+
+  .ribbon-edge-topright {
+	top: -10px;
+	border-width: 10px 0 0 20px;
+}
+
+
+
+@media (max-width: 650px) {
+
+// 	  .ribbon {
+// 	width: 340px;
+// }
+
+
+ .projectDisplay
+	{
+	white-space: normal;
+	}
+
+	// .project img
+	// {
+	// 	width:200px;
+	// 	height:200px;
+	// }
+	
+	.project
+	{
+		margin:10px;
+		margin-top:30px;
+		margin-bottom:30px;
+		// width:200px;
+		// height:200px;
+	}
+
+	.project h2
+	{
+		font-size: 28px;
+	}
+
+
+}
