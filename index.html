@@ -70,7 +70,49 @@
 				</button>
 			</a>
 			</a>
-			<div id = 'a' class = 'hidden'></div>
+			<div id = 'a' class = 'hidden'>
+<!-- 				<div>
+
+
+				<h1>Experience</h1>
+							<hr>
+							<h2>Research Assistant, UMass Gravitational Wave Group</h2>
+		                    <p>Amherst, MA : 2013</p>
+		                    <p> 
+		                        I worked with <a target="_blank" href = 'http://blogs.umass.edu/cadonati/'>Dr. Cadonati</a> and <a target="_blank" href = 'http://www.physics.umass.edu/people/jessica-mciver'>Jess Mclever</a> to improve the summary pages of LIGO. The summary pages are webpages that present LIGO data. They are primarily designed to present secondary channel data such as seismic. The primary task was to set the summary pages up on LIGO Hanford servers.
+		                    </p>
+
+		                    <h3>Accomplishments</h3>
+		                    <ul>
+		                        <li>Identified errors in summary pages code</li>
+		                        <li> Began getting summary pages running on LIGO hanford</li>
+		                    </ul>
+		                    <h2>Consultant, Concord Consortium</h2>
+		                    <p>Concord, MA : 2011-2012</p>
+		                    <p> 
+		                        I worked with the <a target="_blank" href = 'http://www.concord.org'>Concord Consortium</a>, a nonprofit scientific education company. I worked on the <a target="_blank" href = 'http://mw.concord.org/nextgen/'>next gen molecular workbench</a> project to check and see if the simulation of radial bonds they were implementing was correct. I examined the javascript code and extracted from it frequency data from several different simulations. I then took this data and plotted it using python and found a discrepancy between the expected frequency (that of the same simulation in the java version of MW) and the found frequency. This lead them to correct several parameters and fix the simulation. I also created a setup guide for Ubuntu so others running the OS could participate in the project.
+		                    </p>
+
+		                    <h3>Accomplishments</h3>
+		                    <ul>
+		                        <li>Found error in current simulation</li>
+		                        <li>Created getting started guide.</li>
+		                    </ul>
+
+		                    <h2>Intern, UMass Gravitational Wave Group</h2>
+		                    <p>Amherst, MA : 2011-2012<p>
+		                    <p> 
+		                        I worked with the <a target="_blank" href = 'http://blogs.umass.edu/egpa/people/'>Gravitational Wave Group at UMass,  Amherst</a>, most closely with the then grad student <a target="_blank" href = 'http://www.people.umass.edu/het/grads/sraypita.html'>Satya Mohapatra</a> and Prof. Laura Cadonati. I learned python and created various charts and visualizations for the team.  I attended meetings periodically and shared my results with the entire group. I continued my work with them over junior year summer i worked on a visualisation of the r mode oscillations of a neutron star.
+		                    </p>
+		                    <h3>Accomplishments</h3>
+		                    <ul>
+		                        <li>Created animations of 2d and 3d periodic functions using python.</li>   
+		                        <li>Created animations of spherical harmonics using python.</li>
+		                        <li>Created a python program to plot and visualize data on a sphere.</li>
+		                    </ul>
+
+		                </div> -->
+			</div>
 			<div id = 'b' class = 'hidden'></div>
 			<div id = 'bestProjects' class = 'projectDisplay hidden'>
 				<div class = 'slider'>
@@ -246,36 +288,21 @@
 		</section>
 
 		<section id = 'contact'>
-			<h2>Feedback Form</h2>
-				<?php
-				// display form if user has not clicked submit
-				if (!isset($_POST["submit"])) {
-				  ?>
-				  <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
-				  From: <input type="text" name="from"><br>
-				  Subject: <input type="text" name="subject"><br>
-				  Message: <textarea rows="10" cols="40" name="message"></textarea><br>
-				  <input type="submit" name="submit" value="Submit Feedback">
-				  </form>
-				  <?php 
-				} else {    // the user has submitted the form
-				  // Check if the "from" input field is filled out
-				  if (isset($_POST["from"])) {
-				    $from = $_POST["from"]; // sender
-				    $subject = $_POST["subject"];
-				    $message = $_POST["message"];
-				    // message lines should not exceed 70 characters (PHP rule), so wrap it
-				    $message = wordwrap($message, 70);
-				    // send mail
-				    mail("jacksonhenry3@gmail.com",$subject,$message,"From: $from\n");
-				    echo "its great to hear from you, i'll get back ASAP";
-				  }
-				}
-				?>
 
-		<div id = 'alternateCommunication'>
-			<img src="http://people.jumpstartlab.com/images/github.gif" width = '100px'>
-		</div>
+			<div id = 'alternateCommunication'>
+				<button onclick = "window.location.href = 'https://github.com/jacksonhenry3'">
+					Github
+				</button>
+				<button onclick = "window.location.href = 'https://www.facebook.com/jackson.henry3'">
+					Facebook
+				</button>
+				<button onclick = "window.location.href =  'mailto:jacksonhenry3@gmail.com?'">
+					E-Mail
+				</button>
+				<button onclick = "window.location.href =  'Documents/traditionalCV.pdf'">
+					PDF of CV
+				</button>
+			</div>
 		</section>
 	</div>
 	

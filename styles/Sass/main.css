@@ -112,9 +112,9 @@ p a:hover, h3 a:hover {
 
 section {
   padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
   width: 100%;
-  min-height: 500px;
   margin-bottom: 150px;
   width: 100%; }
 

@@ -5,12 +5,28 @@ data =
 		skill:.8
 	},
 	{
+		name:'Image editing',
+		skill:.3
+	},
+	{
 		name:'javascript',
 		skill:.7
 	},
 	{
+		name:'git',
+		skill:.5
+	},
+	{
 		name:'HTML/CSS',
 		skill:.85
+	},
+	{
+		name:'Sass',
+		skill:.35
+	},
+	{
+		name:'mathematica',
+		skill:.4
 	},
 	{
 		name:'Web Design',
@@ -18,13 +34,9 @@ data =
 	},
 	{
 		name:'LaTeX',
-		skill:.4
+		skill:.45
 	},
 	{
-		name:'mathematica',
-		skill:.4
-	},
-		{
 		name:'bash shell',
 		skill:.4
 	},
