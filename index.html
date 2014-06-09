@@ -12,6 +12,15 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:200,800' rel='stylesheet' type='text/css'>
 <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:700,300" rel="stylesheet" type="text/css">
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<!-- 
+1. experience explanations
+2. pages for work (blog?)
+3. science interests
+4. non-webprojects in code
+5. edit blurbs
+
+6. add along those lines to web work
+ -->
 <body>
 	<header>
 		<ul style = 'float:left;'>
@@ -71,47 +80,78 @@
 			</a>
 			</a>
 			<div id = 'a' class = 'hidden'>
-<!-- 				<div>
-
-
-				<h1>Experience</h1>
-							<hr>
-							<h2>Research Assistant, UMass Gravitational Wave Group</h2>
-		                    <p>Amherst, MA : 2013</p>
-		                    <p> 
-		                        I worked with <a target="_blank" href = 'http://blogs.umass.edu/cadonati/'>Dr. Cadonati</a> and <a target="_blank" href = 'http://www.physics.umass.edu/people/jessica-mciver'>Jess Mclever</a> to improve the summary pages of LIGO. The summary pages are webpages that present LIGO data. They are primarily designed to present secondary channel data such as seismic. The primary task was to set the summary pages up on LIGO Hanford servers.
-		                    </p>
-
-		                    <h3>Accomplishments</h3>
-		                    <ul>
-		                        <li>Identified errors in summary pages code</li>
-		                        <li> Began getting summary pages running on LIGO hanford</li>
-		                    </ul>
-		                    <h2>Consultant, Concord Consortium</h2>
-		                    <p>Concord, MA : 2011-2012</p>
-		                    <p> 
-		                        I worked with the <a target="_blank" href = 'http://www.concord.org'>Concord Consortium</a>, a nonprofit scientific education company. I worked on the <a target="_blank" href = 'http://mw.concord.org/nextgen/'>next gen molecular workbench</a> project to check and see if the simulation of radial bonds they were implementing was correct. I examined the javascript code and extracted from it frequency data from several different simulations. I then took this data and plotted it using python and found a discrepancy between the expected frequency (that of the same simulation in the java version of MW) and the found frequency. This lead them to correct several parameters and fix the simulation. I also created a setup guide for Ubuntu so others running the OS could participate in the project.
-		                    </p>
-
-		                    <h3>Accomplishments</h3>
-		                    <ul>
-		                        <li>Found error in current simulation</li>
-		                        <li>Created getting started guide.</li>
-		                    </ul>
-
-		                    <h2>Intern, UMass Gravitational Wave Group</h2>
-		                    <p>Amherst, MA : 2011-2012<p>
-		                    <p> 
-		                        I worked with the <a target="_blank" href = 'http://blogs.umass.edu/egpa/people/'>Gravitational Wave Group at UMass,  Amherst</a>, most closely with the then grad student <a target="_blank" href = 'http://www.people.umass.edu/het/grads/sraypita.html'>Satya Mohapatra</a> and Prof. Laura Cadonati. I learned python and created various charts and visualizations for the team.  I attended meetings periodically and shared my results with the entire group. I continued my work with them over junior year summer i worked on a visualisation of the r mode oscillations of a neutron star.
-		                    </p>
-		                    <h3>Accomplishments</h3>
-		                    <ul>
-		                        <li>Created animations of 2d and 3d periodic functions using python.</li>   
-		                        <li>Created animations of spherical harmonics using python.</li>
-		                        <li>Created a python program to plot and visualize data on a sphere.</li>
-		                    </ul>
-
-		                </div> -->
+				<div id = 'exp_svg'>
+				</div>
+				<div id = "UMass2" class = 'experienceExplanation hidden'>
+					<h2>Research Assistant, UMass Gravitational Wave Group</h2>
+					<p>Amherst, MA : 2013</p>
+					<p> 
+					 	I worked with <a target="_blank" href = 'http://blogs.umass.edu/cadonati/'>Dr. Cadonati</a> and <a target="_blank" href = 'http://www.physics.umass.edu/people/jessica-mciver'>Jess Mclever</a> to improve the summary pages of LIGO. The summary pages are webpages that present LIGO data. They are primarily designed to present secondary channel data such as seismic. The primary task was to set the summary pages up on LIGO Hanford servers.
+					</p>
+					<h3>Accomplishments</h3>
+					<ul>
+					    <li>Identified errors in summary pages code</li>
+					    <li> Began getting summary pages running on LIGO hanford</li>
+					</ul>
+				</div>
+				<div id  = "CC" class = 'experienceExplanation hidden'>
+					<h2>Consultant, Concord Consortium</h2>
+					<p>Concord, MA : 2011-2012</p>
+					<p> 
+						I worked with the <a target="_blank" href = 'http://www.concord.org'>Concord Consortium</a>, a nonprofit scientific education company. I worked on the <a target="_blank" href = 'http://mw.concord.org/nextgen/'>next gen molecular workbench</a> project to check and see if the simulation of radial bonds they were implementing was correct. I examined the javascript code and extracted from it frequency data from several different simulations. I then took this data and plotted it using python and found a discrepancy between the expected frequency (that of the same simulation in the java version of MW) and the found frequency. This lead them to correct several parameters and fix the simulation. I also created a setup guide for Ubuntu so others running the OS could participate in the project.
+					</p>
+					<h3>Accomplishments</h3>
+					<ul>
+						<li>Found error in current simulation</li>
+						<li>Created getting started guide.</li>
+					</ul>
+				</div>
+				<div id = "UMass1" class = 'experienceExplanation hidden'>
+					<h2>Intern, UMass Gravitational Wave Group</h2>
+					<p>Amherst, MA : 2011-2012<p>
+					<p> 
+						I worked with the <a target="_blank" href = 'http://blogs.umass.edu/egpa/people/'>Gravitational Wave Group at UMass,  Amherst</a>, most closely with the then grad student <a target="_blank" href = 'http://www.people.umass.edu/het/grads/sraypita.html'>Satya Mohapatra</a> and Prof. Laura Cadonati. I learned python and created various charts and visualizations for the team.  I attended meetings periodically and shared my results with the entire group. I continued my work with them over junior year summer i worked on a visualisation of the r mode oscillations of a neutron star.
+					</p>
+					<h3>Accomplishments</h3>
+					<ul>
+						<li>Created animations of 2d and 3d periodic functions using python.</li>   
+						<li>Created animations of spherical harmonics using python.</li>
+						<li>Created a python program to plot and visualize data on a sphere.</li>
+					</ul>
+				</div>
+				<div id = "College" class = 'experienceExplanation hidden'>
+					<h2>Physics Major, Rochester Institute of Technology</h2>
+					<p>Rochester, NY : 2012-current<p>
+					<h3>Inormation</h3>
+					<ul>
+						<li>Physics Major</li>   
+						<li>Mathematica Minor</li>
+					</ul>
+				</div>
+				<div id = "webDev" class = 'experienceExplanation hidden'>
+					<h2>Freelance web developer</h2>
+					<p>Amherst, MA : summer 2012<p>
+					<p> 
+						Using modern web standards and W3C compliant code I helped maintain peoples personal and profesional websites.
+					</p>
+					<h3>Acomplishments</h3>
+					<ul>
+						<li>Created website for small startup theater comapny</li>   
+						<li>aided <a href = 'http://rock-itscience.com/'>Rock-it science records</a> with javascript development</li>
+						<li>Consulted for a local therapist <a href = 'http://www.relationship-counseling-center.com/about.html'>Mark Engram</a></li>
+					</ul>
+				</div>
+				<div id = "RIT" class = 'experienceExplanation hidden'>
+					<h2>Research assistant, RIT</h2>
+					<p>Rochester, NY : 2013-preasant<p>
+					<p> 
+						I have been working for Dr. whelan with RIT's CCRG for just over a year now. Under Dr. whelan's guidance i have been using python to create visualizations of the detection geometry of LIGO. This summer i will be continuing my work at the albert einstein institutute in Hannover germany.
+					</p>
+					<h3>Acomplishments</h3>
+					<ul>
+						<li>created function to plot detection geoemetry for any given percentile of inspiral and detector</li>   
+					</ul>
+				</div>
 			</div>
 			<div id = 'b' class = 'hidden'></div>
 			<div id = 'bestProjects' class = 'projectDisplay hidden'>

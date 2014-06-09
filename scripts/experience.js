@@ -20,16 +20,16 @@ data =  [
 			// 	shape:'triangle',
 			// 	colour:'rgba(136,28,28,.7)'
 			// },
+			// {
+			// 	id:'highSchool',
+			// 	name:'ARHS',
+			// 	time:[2008+8/12,2012+5/12],
+			// 	shape:'triangle',
+			// 	labelHeight:svgHeight-160,
+			// 	colour:'rgba(143,25,25,.7)'
+			// },
 			{
-				id:'highSchool',
-				name:'ARHS',
-				time:[2008+8/12,2012+5/12],
-				shape:'triangle',
-				labelHeight:svgHeight-160,
-				colour:'rgba(143,25,25,.7)'
-			},
-			{
-				id:'College',
+				id:'CollegeSVG',
 				name:'RIT',
 				time:[2012+8/12,2014+5/12],
 				shape:'triangle',
@@ -37,7 +37,7 @@ data =  [
 				colour:'rgba(243,110,33,.7)'
 			},
 			{
-				id:'UMassInternship1',
+				id:'UMassInternship1SVG',
 				name:'UMass internship',
 				time:[2011,2012+5/12],
 				shape:'square',
@@ -103,7 +103,7 @@ function  makeShape(points,type,name)
 	}
 }
 
-svg = d3.select("#a").append("svg")// add the svg element to body
+svg = d3.select("#exp_svg").append("svg")// add the svg element to body
 		.attr("width" , svgWidth)
 		.attr("height", svgHeight);
 
@@ -115,18 +115,21 @@ var lineFunction = d3.svg.line()
 
 
 var xScale = d3.scale.linear()
-	.domain([2008+8/12,2014+5/12])
+	.domain([2011,2014+5/12])
 	.range([20,svgWidth-20])
+
 
 svg.selectAll("path")
 	.data(data)
 	.enter()
 	.append("path")
 	.style('position','relative')
+	.style('cursor','pointer')
 	.attr("id",function(d){return(d.id)})
 	.attr("fill", function(d){return(d.colour)})
 	.attr("stroke-width",10)
-	.attr("d", function(d){return(lineFunction(makeShape(d.time,d.shape,d.name)))});
+	.attr("d", function(d){return(lineFunction(makeShape(d.time,d.shape,d.name)))})
+	.on("click", function(d){showDesc(d)});
 
 
 svg.selectAll("circle")
@@ -135,8 +138,10 @@ svg.selectAll("circle")
 	.append("circle")
 	.attr('r',5)
 	.style("fill", "#222")
+	.style('cursor','pointer')
 	.attr('cx',function(d){return(xScale(d.time[0]+(d.time[1]-d.time[0])/2))})
-	.attr('cy',svgHeight-50-50);
+	.attr('cy',svgHeight-50-50)
+	.on("click", function(d){showDesc(d)});
 
 svg.selectAll("line")
 	.data(data)
@@ -145,7 +150,9 @@ svg.selectAll("line")
 	.attr('y1',svgHeight-50-50)
 	.attr('y2',function(d){return(d.labelHeight)})
 	.style("stroke", "#222")
+	.style('cursor','pointer')
 	.style("stroke-width", 2)
+	.on("click", function(d){showDesc(d)})
 	.attr('x1',function(d){return(xScale(d.time[0]+(d.time[1]-d.time[0])/2))})
 	.attr('x2',function(d){return(xScale(d.time[0]+(d.time[1]-d.time[0])/2))});
 
@@ -156,6 +163,8 @@ svg.selectAll("text")
 	.append("text")
 	.text(function(d){return(d.name)})
 	.style("stroke", "#222")
+	.style('cursor','pointer')
+	.on("click", function(d){showDesc(d)})
 	.attr('y',function(d){return(d.labelHeight-2)})
 	.attr("text-anchor", 
 			function(d){
@@ -176,7 +185,7 @@ svg.selectAll("text")
 
 var xAxis = d3.svg.axis()
 .scale(xScale)
-.tickSize(4).tickPadding(8).ticks(6).tickFormat(d3.format("0000"))
+.tickSize(4).tickPadding(8).ticks(3).tickFormat(d3.format("0000"))
 .orient("bottom");
 
 svg.append("g")
@@ -184,3 +193,24 @@ svg.append("g")
 .attr("stroke","#222")
 .attr("transform", "translate(0," + String(svgHeight-50) + ")")
 .call(xAxis);
+
+
+function showDesc(d)
+{
+	if (d.id == 'CollegeSVG') {element = 'College'}
+		else if (d.id == 'UMassInternship1SVG') {element = 'UMass1'}
+		else if (d.id == 'ConcordConsortium') {element = 'CC'}
+		else if (d.id == 'WebDeveloper') {element = 'webDev'}
+		else if (d.id == 'UMassInternship2') {element = 'UMass2'}
+		else if (d.id == 'RITIntership') {element = 'RIT'};
+		experiences = ['#College','#UMass1','#CC','#webDev','#UMass2','#RIT']
+		var i = experiences.indexOf('#'+element);
+		if(i != -1) {
+			experiences.splice(i, 1);
+		}
+		for (var i = experiences.length - 1; i >= 0; i--) {
+			experiences[i] = d3.select(experiences[i])[0][0]
+		};
+		about = d3.select('#'+element)[0][0]
+		showHide(about,experiences)
+}

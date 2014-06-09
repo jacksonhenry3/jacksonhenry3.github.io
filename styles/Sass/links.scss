@@ -7,7 +7,7 @@ a
 	display: inline-block;
 }
 
-p a,h3 a
+p a,h3 a, li a
 {
 	font-weight:bold;
 	z-index:10;
@@ -15,7 +15,7 @@ p a,h3 a
 
 }
 
-p a:after,h3 a:after
+p a:after,h3 a:after, li a:after
 {
 	position: absolute;
 	content:'';
@@ -29,7 +29,7 @@ p a:after,h3 a:after
 	height:0;
 	z-index:-1;
 }
-p a:hover:after,h3 a:hover:after
+p a:hover:after,h3 a:hover:after, li a:hover:after
 {
 	top:0%;
 	left:-10%;
@@ -37,12 +37,12 @@ p a:hover:after,h3 a:hover:after
 	height:100%;
 }
 
-p a:hover,,h3 a:hover
+p a:hover,h3 a:hover,li a:hover
 {
 	overflow:visible;
 }
 
-p a:hover,h3 a:hover
+p a:hover,h3 a:hover,li a:hover
 {
 	color:white;
 }

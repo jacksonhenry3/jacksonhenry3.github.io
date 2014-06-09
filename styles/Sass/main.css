@@ -80,12 +80,12 @@ a {
   transition: all .5s;
   display: inline-block; }
 
-p a, h3 a {
+p a, h3 a, li a {
   font-weight: bold;
   z-index: 10;
   padding: 2px; }
 
-p a:after, h3 a:after {
+p a:after, h3 a:after, li a:after {
   position: absolute;
   content: '';
   transition: all .3s;
@@ -98,16 +98,16 @@ p a:after, h3 a:after {
   height: 0;
   z-index: -1; }
 
-p a:hover:after, h3 a:hover:after {
+p a:hover:after, h3 a:hover:after, li a:hover:after {
   top: 0%;
   left: -10%;
   width: 120%;
   height: 100%; }
 
-p a:hover, h3 a:hover {
+p a:hover, h3 a:hover, li a:hover {
   overflow: visible; }
 
-p a:hover, h3 a:hover {
+p a:hover, h3 a:hover, li a:hover {
   color: white; }
 
 section {
@@ -516,6 +516,20 @@ svg {
   -o-transform: translate(100px, 100px) rotate(360deg);
   -webkit-transform: translate(100px, 100px) rotate(360deg);
   transform: translate(100px, 100px) rotate(360deg); }
+
+.experienceExplanation {
+  max-width: 1000px;
+  margin: 25px auto;
+  margin-bottom: 75px; }
+
+.experienceExplanation h3 {
+  padding-top: 20px; }
+
+.experienceExplanation ul {
+  font-family: "Roboto Slab", serif; }
+
+.experienceExplanation h2 {
+  padding-bottom: 0px; }
 
 html, body, * {
   margin: 0px;

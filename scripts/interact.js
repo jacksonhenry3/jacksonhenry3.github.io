@@ -1,5 +1,6 @@
 function showHide(elem,siblings)
 {
+  console.log(elem)
 	if (elem.className.indexOf('hidden') != -1)
 	{
 		elem.className = elem.className.replace("hidden","")
@@ -12,16 +13,12 @@ function showHide(elem,siblings)
 	{
 		elem.className+=' hidden'
 	}
-
-  if (siblings[0].className.indexOf('hidden') == -1)
-  {
-    siblings[0].className+=' hidden'
-  }
-
-  if (siblings[1].className.indexOf('hidden') == -1)
-  {
-    siblings[1].className+=' hidden'
-  }
+  for (var i = siblings.length - 1; i >= 0; i--) {
+    if (siblings[i].className.indexOf('hidden') == -1)
+    {
+      siblings[i].className+=' hidden'
+    }
+  };
 
 }
 
