@@ -2,6 +2,26 @@ Number.prototype.mod = function(n) {
 return ((this%n)+n)%n;
 }
 
+var images = new Array()
+function preload() {
+	for (i = 0; i < preload.arguments.length; i++) {
+		images[i] = new Image()
+		images[i].src = preload.arguments[i]
+	}
+}
+
+preload(
+	"1.JPG",
+	"2.JPG",
+	"3.JPG",
+	"4.JPG",
+	"5.JPG",
+	"6.JPG",
+	"7.JPG",
+
+)
+
+
 date = new Date()
 date = new Date(1404500000000)
 numDays = 31
