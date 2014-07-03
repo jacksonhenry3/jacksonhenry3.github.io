@@ -17,9 +17,7 @@ preload(
 	"4.JPG",
 	"5.JPG",
 	"6.JPG",
-	"7.JPG",
-
-)
+	"7.JPG")
 
 
 date = new Date()
