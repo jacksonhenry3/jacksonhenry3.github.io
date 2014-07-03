@@ -21,10 +21,16 @@ div {
 {
     width:400px;
     height:360px;
+
 }
 body 
 {
-    background-color: #FAFAFA;
+    /*background-image: url('1.JPG');*/
+    background-position: center;
+    background-size: 100%;
+    overflow: hidden;
+    background-size:cover;
+    transition:all 1.5s;
 }
 
 #heart {

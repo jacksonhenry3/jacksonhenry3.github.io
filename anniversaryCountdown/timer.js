@@ -11,17 +11,11 @@ UntillDate = new Date(1404500000000)
 
 millSec = (UntillDate.getMilliseconds()-date.getMilliseconds()).mod(1000)
 seconds = (UntillDate.getSeconds()-date.getSeconds()).mod(60)*999+millSec
-
 minutes = (UntillDate.getMinutes()-date.getMinutes()).mod(60)*59*999+seconds
-
 hours   = (UntillDate.getHours()-date.getHours()).mod(24)*59*59*999+minutes
-
 days    = (UntillDate.getDate()-date.getDate()).mod(numDays)*23*59*59*999+hours
-
 months  = (UntillDate.getMonth()-date.getMonth()).mod(12)*numDays*24*59*59*999+days
-mth = (UntillDate.getMonth()-date.getMonth()).mod(12)
 years   = (UntillDate.getFullYear()-date.getFullYear()).mod(1)*12*numDays*24*59*59*999+days
-yrs =  (UntillDate.getFullYear()-date.getFullYear()).mod(1)
 data = 
 	[
 		millSec/999,
@@ -35,39 +29,39 @@ data =
 
 
 millisecArc = d3.svg.arc()
-	.innerRadius(120)
-	.outerRadius(140.25)
+	.innerRadius(130)
+	.outerRadius(150)
 	.startAngle(0)
 	.endAngle(function(d){return(d)})
 
 secArc = d3.svg.arc()
-	.innerRadius(100)
-	.outerRadius(120.1)
+	.innerRadius(110)
+	.outerRadius(130.1)
 	.startAngle(0)
 	.endAngle(function(d){return(d)})
 minArc = d3.svg.arc()
-	.innerRadius(80)
-	.outerRadius(100.1)
+	.innerRadius(90)
+	.outerRadius(110.1)
 	.startAngle(0)
 	.endAngle(function(d){return(d)})
 hrArc = d3.svg.arc()
-	.innerRadius(60)
-	.outerRadius(80.1)
+	.innerRadius(70)
+	.outerRadius(90.1)
 	.startAngle(0)
 	.endAngle(function(d){return(d)})
 dayArc = d3.svg.arc()
-	.innerRadius(40)
-	.outerRadius(60.1)
+	.innerRadius(50)
+	.outerRadius(70.1)
 	.startAngle(0)
 	.endAngle(function(d){return(d)})
 monthArc = d3.svg.arc()
-	.innerRadius(20)
-	.outerRadius(40.1)
+	.innerRadius(30)
+	.outerRadius(50.1)
 	.startAngle(0)
 	.endAngle(function(d){return(d)})
 yearArc = d3.svg.arc()
 	.innerRadius(0)
-	.outerRadius(20.1)
+	.outerRadius(30.1)
 	.startAngle(0)
 	.endAngle(function(d){return(d)})
 
@@ -101,7 +95,8 @@ svg.selectAll("path")
 	.attr('class',function(d,i){return(i)})
     .attr("transform", "translate(150,150)")
     .attr("d", function(d,i){return(newData(d,i))})
-    .attr('fill','rgba(220,50,100,.5)');
+    .attr('fill','rgba(220,220,220,.2)');
+    // .attr('fill',function(d,i){console.log(d);return('rgba(0,0,'+String(d*255)+',.5)')});
 
 function go()
 {
@@ -113,6 +108,8 @@ function go()
 		document.getElementById('heart').style.opacity = '1';
 		document.getElementById('countdown').style.opacity = '0';
 	}
+
+
 	
 
 	numDays = 31
@@ -147,7 +144,15 @@ years   = (UntillDate.getFullYear()-date.getFullYear()).mod(1)*12*numDays*24*59*
 		.data(data)
 		// .transition()
 		// .duration(300)
-	    .attr("d", function(d,i){return(newData(d,i))});
+	    .attr("d", function(d,i){return(newData(d,i))})
+	    .attr('fill','rgba(230,230,230,.4)');
+	    // .attr('fill',function(d,i){a = 'rgba(0,0,'+String(Math.floor(-d*255))+',.5)';console.log(a);return(a);});
 };
-
+function changePic()
+{
+		N = Math.ceil(Math.random()*7)	
+		document.body.style.backgroundImage = "url('"+N+".JPG')"
+}
+changePic()
 window.setInterval(go,5 )
+window.setInterval(changePic,10000)
