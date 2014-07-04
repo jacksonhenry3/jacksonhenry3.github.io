@@ -22,7 +22,7 @@ preload(
 
 date = new Date()
 
-numDays = 31
+numDays = 30
 
 UntillDate = new Date(1404500000000)
 
@@ -119,10 +119,18 @@ svg.selectAll("path")
 function go()
 {
 	date = new Date()
-	numDays = 31
+	numDays = 30
 
-	// UntillDate = new Date(1404500000000-1000*60*60*24*30)
 
+
+
+if (date.getTime() >= 1404500000000)
+	{
+		console.log(date)
+		date = new Date(1404500000000)
+		document.getElementById('heart').style.opacity = '.5';
+		document.getElementById('countdown').style.opacity = '0';
+	}
 
 millSec = (UntillDate.getMilliseconds()-date.getMilliseconds()).mod(1000)
 seconds = (UntillDate.getSeconds()-date.getSeconds()).mod(60)*999+millSec
@@ -131,14 +139,6 @@ hours   = (UntillDate.getHours()-date.getHours()).mod(24)*59*59*999+minutes
 days    = (UntillDate.getDate()-date.getDate()).mod(numDays)*23*59*59*999+hours
 months  = (UntillDate.getMonth()-date.getMonth()).mod(12)*numDays*24*59*59*999+days
 years   = (UntillDate.getFullYear()-date.getFullYear()).mod(1)*12*numDays*24*59*59*999+days
-
-if (date.getTime() >= 1404500000000)
-	{
-		date = new Date(1404500000000)
-		document.getElementById('heart').style.opacity = '1';
-		document.getElementById('countdown').style.opacity = '0';
-	}
-
 	data = 
 		[
 			-1+millSec/999,
