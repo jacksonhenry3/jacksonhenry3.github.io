@@ -30,7 +30,7 @@ body
     background-size: 100%;
     overflow: hidden;
     background-size:cover;
-    transition:all 1.5s;
+    transition:all 3s;
 }
 
 #heart {

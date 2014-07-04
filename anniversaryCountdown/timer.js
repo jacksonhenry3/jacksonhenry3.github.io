@@ -119,29 +119,19 @@ svg.selectAll("path")
 function go()
 {
 	date = new Date()
-	// date = new Date(1404500000000+1000)
-	if (date.getTime() >= 1404500000000)
-	{
-		date = new Date(1404500000000)
-		document.getElementById('heart').style.opacity = '1';
-		document.getElementById('countdown').style.opacity = '0';
-	}
-
-
-	
-
 	numDays = 31
 
 	// UntillDate = new Date(1404500000000-1000*60*60*24*30)
 
 
 millSec = (UntillDate.getMilliseconds()-date.getMilliseconds()).mod(1000)
-seconds = (UntillDate.getSeconds()-date.getSeconds()).mod(59)*999+millSec
-minutes = (UntillDate.getMinutes()-date.getMinutes()).mod(59)*59*999+seconds
-hours   = (UntillDate.getHours()- UntillDate.getHours()).mod(23)*59*59*999+minutes
-days    = (UntillDate.getDate()-date.getDate()).mod(numDays-1)*23*59*59*999+hours
-months  = (UntillDate.getMonth()-date.getMonth()).mod(11)*numDays*24*59*59*999+days
-years   = (UntillDate.getFullYear()-date.getFullYear()).mod(1)*12*numDays*24*59*59*999+months
+seconds = (UntillDate.getSeconds()-date.getSeconds()).mod(60)*999+millSec
+minutes = (UntillDate.getMinutes()-date.getMinutes()).mod(60)*59*999+seconds
+hours   = (UntillDate.getHours()-date.getHours()).mod(24)*59*59*999+minutes
+days    = (UntillDate.getDate()-date.getDate()).mod(numDays)*23*59*59*999+hours
+months  = (UntillDate.getMonth()-date.getMonth()).mod(12)*numDays*24*59*59*999+days
+years   = (UntillDate.getFullYear()-date.getFullYear()).mod(1)*12*numDays*24*59*59*999+days
+
 
 
 	data = 
