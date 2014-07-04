@@ -21,7 +21,7 @@ preload(
 
 
 date = new Date()
-date = new Date(1404500000000)
+
 numDays = 31
 
 UntillDate = new Date(1404500000000)
@@ -132,7 +132,12 @@ days    = (UntillDate.getDate()-date.getDate()).mod(numDays)*23*59*59*999+hours
 months  = (UntillDate.getMonth()-date.getMonth()).mod(12)*numDays*24*59*59*999+days
 years   = (UntillDate.getFullYear()-date.getFullYear()).mod(1)*12*numDays*24*59*59*999+days
 
-
+if (date.getTime() >= 1404500000000)
+	{
+		date = new Date(1404500000000)
+		document.getElementById('heart').style.opacity = '1';
+		document.getElementById('countdown').style.opacity = '0';
+	}
 
 	data = 
 		[
