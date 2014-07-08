@@ -59,6 +59,7 @@
 
                 camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
                 camera.position.z = 5;
+                camera.aspect = 1;
 
                 // scene
 
@@ -94,7 +95,8 @@
 
                 //
 
-                window.addEventListener( 'resize', onWindowResize, false );
+                // window.addEventListener( 'resize', onWindowResize, false );
+
 
             }
 
