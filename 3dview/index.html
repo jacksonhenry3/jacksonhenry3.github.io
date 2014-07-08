@@ -60,7 +60,7 @@
                 document.body.appendChild( container );
 
                 camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-                camera.position.z = 100;
+                // camera.position.z = 100;
 
                 // scene
 
@@ -78,7 +78,7 @@
                 var loader = new THREE.OBJMTLLoader();
                 loader.load( 'snapshot.obj', 'snapshot.mtl', function ( object ) {
 
-                    object.position.y = - 80;
+                    // object.position.y = - 80;
                     scene.add( object );
 
                 } );
@@ -89,7 +89,7 @@
                 renderer.setSize( window.innerWidth, window.innerHeight );
                 container.appendChild( renderer.domElement );
 
-                document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+                // document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 
                 //
 
