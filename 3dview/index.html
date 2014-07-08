@@ -78,8 +78,10 @@
                 var loader = new THREE.OBJMTLLoader();
                 loader.load( 'snapshot.obj', 'snapshot.mtl', function ( object ) {
 
-                    // object.position.y = - 80;
-                    scene.add( object );
+                    object.position.x = 0;
+                    object.position.y = 0;
+                    object.position.z = 0;
+                    scene.add( object )
 
                 } );
 
