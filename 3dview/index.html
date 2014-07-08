@@ -60,7 +60,7 @@
                 document.body.appendChild( container );
 
                 camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-                // camera.position.z = 100;
+                camera.position.z = 5;
 
                 // scene
 
@@ -80,7 +80,6 @@
 
                     object.position.x = 0;
                     object.position.y = 0;
-                    object.position.z = 0;
                     scene.add( object )
 
                 } );
@@ -91,7 +90,7 @@
                 renderer.setSize( window.innerWidth, window.innerHeight );
                 container.appendChild( renderer.domElement );
 
-                // document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+                document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 
                 //
 
