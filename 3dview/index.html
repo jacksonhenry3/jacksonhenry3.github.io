@@ -22,6 +22,13 @@
                 display:block;
             }
             #info a, .button { color: #f00; font-weight: bold; text-decoration: underline; cursor: pointer }
+            #poop
+            {
+                position: absolute;
+                margin:50px auto;
+                width:200px;
+                height:200px;
+            }
         </style>
     </head>
 
@@ -57,6 +64,7 @@
             function init() {
 
                 container = document.createElement( 'div' );
+                container.id = 'poop'
                 document.body.appendChild( container );
 
                 camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
