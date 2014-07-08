@@ -17,6 +17,7 @@
             {
 
                 /*position: absolute;*/
+                overflow:hidden;
                 margin:50px auto;
                 width:500px;
                 height:500px;
@@ -62,8 +63,8 @@
                 // scene
 
                 scene = new THREE.Scene();
-                var WIDTH = window.innerWidth / 2;
-                    HEIGHT = window.innerHeight / 2;
+                var WIDTH = 500,
+                    HEIGHT = 400;
                 var ambient = new THREE.AmbientLight( 0x444444 );
                 scene.add( ambient );
 
@@ -101,7 +102,7 @@
                 windowHalfX = window.innerWidth / 2;
                 windowHalfY = window.innerHeight / 2;
 
-                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.aspect = 1;
                 camera.updateProjectionMatrix();
 
                 renderer.setSize( window.innerWidth, window.innerHeight );
