@@ -31,7 +31,7 @@ data =  [
 			{
 				id:'CollegeSVG',
 				name:'RIT',
-				time:[2012+8/12,2014+5/12],
+				time:[2012+8/12,2014+10/12],
 				shape:'triangle',
 				labelHeight:svgHeight-180,
 				colour:'rgba(243,110,33,.7)'
@@ -71,10 +71,26 @@ data =  [
 			{
 				id:'RITIntership',
 				name:'researcher at RIT',
-				time:[2013+8/12,2014+5/12],
+				time:[2013+8/12,2014+5.5/12],
 				shape:'square',
 				labelHeight:svgHeight-260,
 				colour:'rgba(243,110,33,.7)'
+			},
+			{
+				id:'RITIntership2',
+				name:'researcher at RIT',
+				time:[2014+8/12,2014+10/12],
+				shape:'square',
+				labelHeight:svgHeight-200,
+				colour:'rgba(243,110,33,.7)'
+			},
+			{
+				id:'AEIMPG',
+				name:'Albert Einstien Institute',
+				time:[2014+6/12,2014+8/12],
+				shape:'square',
+				labelHeight:svgHeight-260,
+				colour:'rgba(50,70,200,.7)'
 			},
 		]
 
@@ -115,7 +131,7 @@ var lineFunction = d3.svg.line()
 
 
 var xScale = d3.scale.linear()
-	.domain([2011,2014+5/12])
+	.domain([2011,2014+10.5/12])
 	.range([20,svgWidth-20])
 
 
