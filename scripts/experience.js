@@ -89,7 +89,7 @@ data =  [
 				name:'Albert Einstien Institute',
 				time:[2014+6/12,2014+8/12],
 				shape:'square',
-				labelHeight:svgHeight-260,
+				labelHeight:svgHeight,
 				colour:'rgba(50,70,200,.7)'
 			},
 		]
@@ -184,14 +184,22 @@ svg.selectAll("text")
 	.attr('y',function(d){return(d.labelHeight-2)})
 	.attr("text-anchor", 
 			function(d){
-							if (d.name == 'RIT')
-							{
-								return("end")
-							}
+							// if (d.name == 'RIT')
+							// {
+							// 	return("end")
+							// }
 
 							if (d.name == 'web dev')
 							{
 								return("start")
+							}
+							if (d.id == "AEIMPG")
+							{
+								return("end")
+							}
+							if (d.id == "RITIntership2")
+							{
+								return("end")
 							}
 							return("middle")
 						}
@@ -218,8 +226,9 @@ function showDesc(d)
 		else if (d.id == 'ConcordConsortium') {element = 'CC'}
 		else if (d.id == 'WebDeveloper') {element = 'webDev'}
 		else if (d.id == 'UMassInternship2') {element = 'UMass2'}
-		else if (d.id == 'RITIntership') {element = 'RIT'};
-		experiences = ['#College','#UMass1','#CC','#webDev','#UMass2','#RIT']
+		else if (d.id == 'RITIntership') {element = 'RIT'}
+		else if (d.id == 'AEIMPG') {element = 'AEI'};
+		experiences = ['#College','#UMass1','#CC','#webDev','#UMass2','#RIT','#AEI']
 		var i = experiences.indexOf('#'+element);
 		if(i != -1) {
 			experiences.splice(i, 1);
