@@ -91,7 +91,7 @@ data =  [
 				shape:'square',
 				labelHeight:svgHeight,
 				colour:'rgba(50,70,200,.7)'
-			},
+			}
 		]
 
 function  makeShape(points,type,name)
