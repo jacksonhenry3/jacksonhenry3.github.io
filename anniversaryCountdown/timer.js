@@ -25,6 +25,7 @@ date = new Date()
 numDays = 30
 
 UntillDate = new Date(1404500000000)
+UntillDate = new Date(2015, 11, 26, 0, 0, 0, 0)
 
 
 millSec = (UntillDate.getMilliseconds()-date.getMilliseconds()).mod(1000)
@@ -124,7 +125,7 @@ function go()
 
 
 
-if (date.getTime() >= 1404500000000)
+if (date.getTime() >= UntillDate.getTime())
 	{
 		console.log(date)
 		date = new Date(1404500000000)
