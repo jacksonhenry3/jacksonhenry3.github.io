@@ -1,0 +1,154 @@
+.navigationButton {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  border-radius: 100px;
+  color: white;
+  background: #42c096;
+  font-weight: 400;
+  font-size: 1.3em; }
+
+button {
+  position: relative;
+  display: inline-block;
+  max-width: 250px;
+  padding: 5px;
+  margin: 5px;
+  outline: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .6s;
+  border: 0;
+  z-index: 0;
+  color: white;
+  background: #42c096;
+  text-align: center;
+  font-size: 20px; }
+
+button::after {
+  position: absolute;
+  transform: rotate(45deg);
+  bottom: -240px;
+  left: -200px;
+  height: 250px;
+  width: 250px;
+  content: '';
+  transition: all .6s;
+  z-index: -1;
+  background: #D55282; }
+
+button:hover::after {
+  left: -35px;
+  bottom: -105px;
+  background: #D05282; }
+
+#computerSkillContainer {
+  max-width: 1000px;
+  margin: 0px auto;
+  text-align: center; }
+
+.skill {
+  margin: 0px; }
+
+.experienceBar {
+  transition: transform .8s;
+  transform: translate(100px, 100px) rotate(0deg); }
+
+.skill:hover .experienceBar {
+  transform: translate(100px, 100px) rotate(360deg); }
+
+.description {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  background: #42c096;
+  opacity: 0;
+  transition: left .5s, opacity .5s; }
+
+.shown {
+  opacity: 1;
+  left: 0%; }
+
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+.image {
+  position: relative;
+  display: block;
+  margin: 0px auto;
+  text-align: center; }
+  .image img {
+    border-radius: 500px;
+    display: block;
+    margin: 0px auto;
+    width: 80%;
+    max-width: 300px; }
+  .image #banner {
+    width: 200%;
+    left: -50%;
+    color: white;
+    text-align: center;
+    background-color: #42c096;
+    position: absolute;
+    bottom: 5em;
+    padding: 5px; }
+  .image h1 {
+    line-height: .5em;
+    padding: 0.2em;
+    margin: 0px; }
+
+html {
+  max-width: 100%;
+  overflow-x: hidden; }
+
+body {
+  margin-bottom: 45px;
+  margin-bottom: 45px;
+  font-family: 'Roboto Slab', serif; }
+
+.container-fluid {
+  padding: 0px;
+  padding-top: 25px; }
+
+.col-sm-4 {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em; }
+
+.navigationContainer {
+  margin: 0px auto;
+  max-width: 1366px; }
+
+.noscroll {
+  overflow: hidden; }
+
+#exp_svg {
+  width: 380px;
+  display: block;
+  margin: 0px auto; }
+
+.centeringParent {
+  position: relative;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: white; }
+
+.centeringChild {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13pt;
+  line-height: 105%; }
+
+@media screen and (min-width: 480px) {
+  svg {
+    margin-left: 140px; }
+
+  .container-fluid {
+    padding: 25px; } }
+
+/*# sourceMappingURL=main.css.map */

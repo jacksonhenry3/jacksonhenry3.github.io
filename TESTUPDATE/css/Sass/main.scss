@@ -1,0 +1,79 @@
+$colorPrimary: rgb(66,192,150);
+$colorSecondary: #D55282;
+$opacity: .8;
+
+@import 'button';
+@import 'skills';
+@import 'detailsPain';
+@import 'banner';
+
+html
+{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body
+{
+    margin-bottom: 45px;
+    margin-bottom: 45px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container-fluid
+{
+  padding:0px;
+  padding-top:25px;
+}
+
+.col-sm-4
+{
+    padding-top:    0.1em;
+    padding-bottom: 0.1em;
+}
+
+.navigationContainer
+{
+  margin:0px auto;
+  max-width:1366px;
+}
+
+.noscroll
+{
+  overflow: hidden;
+}
+
+#exp_svg
+{
+  width:380px;
+  display: block;
+  margin:0px auto;
+}
+
+.centeringParent {
+  position: relative;
+  height: 100%;
+  margin-left:5%;
+  margin-right:5%;
+  color: white;
+}
+.centeringChild {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13pt;
+  line-height: 105%;
+}
+
+
+@media screen and (min-width: 480px)
+{
+    svg
+    {
+        margin-left: 140px;
+    }
+    .container-fluid
+    {
+        padding:25px;
+    }
+}

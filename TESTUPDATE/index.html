@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>resume</title>
+
+        <!-- fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,700' rel='stylesheet' type='text/css'>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- my styles -->
+        <link href="css/Sass/main.css" rel="stylesheet">
+
+        <!-- Old browser support -->
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div>
+                <div class="image">
+                    <img src="media/me.jpg">
+                    <div id = 'banner'>
+                        <h1>Jackson Henry</h1>
+                        <h4>jackson.henry@ligo.org</h4>
+                    </div>
+                    <h3>A Passionate Physicist and Programmer</h3>
+                </div>
+            </div>
+            <div class="row navigationContainer">
+                <div class="col-sm-4">
+                    <button type="button" class="navigationButton">Portfolio</button>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" class="navigationButton">Skills</button>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" class="navigationButton">Employment</button>
+                </div>
+            </div>
+            <div id = 'exp_svg'>
+                <div class = 'description'>
+                    <div class="centeringParent">
+                        <div class = "centeringChild">
+                           <h1 id = 'DescriptionTitle'>Lorem ipsum dolor</h1>
+                            <p id = 'DescriptionContent'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                    <button type="button" id = 'close' class="glyphicon glyphicon-remove" aria-hidden="true"></button>
+                </div>
+            </div>
+            <div id = 'computerSkillContainer'>
+            </div>
+        </div>
+    </body>
+    <!-- d3.js -->
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <!-- jquerry -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- bootstrap javascript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Creates and manages the timeline -->
+    <script src="js/experience.js"></script>
+
+    <!-- create and manages the skill circles -->
+    <script src="js/skills.js"></script>
+</html>

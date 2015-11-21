@@ -1,0 +1,61 @@
+.navigationButton
+{
+    display       : block;
+
+    width         : 80%;
+    margin        : 10px auto;
+    border-radius : 100px;
+
+    color         : white;
+    background    : $colorPrimary;
+
+    font-weight   : 400;
+    font-size     : 1.3em;
+}
+
+button
+{
+    position   : relative;
+    display    : inline-block;
+
+    max-width  : 250px;
+    padding    : 5px;
+    margin     : 5px;
+
+    outline    : 0;
+    cursor     : pointer;
+    overflow   : hidden;
+    transition : all .6s;
+    border     : 0;
+    z-index    : 0;
+
+    color      : white;
+    background : $colorPrimary;
+
+    text-align : center;
+    font-size  : 20px;
+}
+
+button::after
+{
+    position   : absolute;
+    transform  : rotate(45deg);
+
+    bottom     : -240px;
+    left       : -200px;
+    height     : 250px;
+    width      : 250px;
+
+    content    : '';
+    transition : all .6s;
+    z-index    : -1;
+
+    background : $colorSecondary;
+}
+
+button:hover::after
+{
+  left       : -35px;
+  bottom     : -105px;
+  background : #D05282;
+}

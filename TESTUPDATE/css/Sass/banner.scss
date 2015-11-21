@@ -1,0 +1,31 @@
+.image {
+  position: relative;
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  // background: red;
+  img {
+    border-radius: 500px;
+    display:       block;
+    margin:        0px auto;
+    width:         80%;
+    max-width:     300px;
+  }
+  #banner
+  {
+    width:200%;
+    left:-50%;
+    color: white;
+    text-align: center;
+    background-color: $colorPrimary;
+    position: absolute;
+    bottom:5em;
+    padding:5px;
+  }
+  h1 {
+    
+    line-height: .5em;
+    padding: 0.2em;
+    margin: 0px;
+  }
+}

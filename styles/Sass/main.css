@@ -210,27 +210,21 @@ form {
   0%,50% {
     top: 0px;
     color: #222; }
-
   25% {
     top: 10px;
     color: #42c096; }
-
   100% {
     color: #222; } }
-
 /* Standard syntax */
 @keyframes bounce {
   0%,50% {
     top: 0px;
     color: #222; }
-
   25% {
     top: 10px;
     color: #42c096; }
-
   100% {
     color: #222; } }
-
 .slider {
   position: relative;
   left: 0px; }
@@ -482,18 +476,14 @@ svg {
 @-webkit-keyframes myfirst {
   from {
     -webkit-transform: translate(100px, 100px) rotate(0deg); }
-
   to {
     -webkit-transform: translate(100px, 100px) rotate(360deg); } }
-
 /* Standard syntax */
 @keyframes myfirst {
   from {
     background: red; }
-
   to {
     background: yellow; } }
-
 .skill {
   margin: 20px; }
 
@@ -538,7 +528,7 @@ html, body, * {
 body {
   overflow-x: hidden;
   height: 100%;
-  color: #222222;
+  color: #222;
   font-family: "Roboto Slab", serif;
   background-color: #F5F5F5; }
 
@@ -568,3 +558,5 @@ ul {
 
 .hidden {
   display: none; }
+
+/*# sourceMappingURL=main.css.map */

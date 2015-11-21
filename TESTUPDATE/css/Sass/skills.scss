@@ -1,0 +1,23 @@
+#computerSkillContainer
+{
+  max-width:1000px;
+  margin:0px auto;
+
+  text-align: center;
+}
+
+.skill
+{
+    margin:0px;
+}
+
+.experienceBar
+{
+    transition : transform .8s;
+    transform  : translate(100px, 100px) rotate(0deg)
+}
+
+.skill:hover .experienceBar
+{
+    transform : translate(100px, 100px) rotate(360deg)
+}
