@@ -18,7 +18,13 @@
 
 #close
 {
+  font-size: 300%;
   position: absolute;
   top:10px;
   right:10px;
+}
+
+#close::after
+{
+width:0;
 }
