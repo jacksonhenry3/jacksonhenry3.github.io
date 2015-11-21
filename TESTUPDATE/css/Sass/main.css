@@ -80,7 +80,8 @@ button:hover::after {
   position: relative;
   display: block;
   margin: 0px auto;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
   .image img {
     border-radius: 500px;
     display: block;
@@ -88,8 +89,7 @@ button:hover::after {
     width: 80%;
     max-width: 300px; }
   .image #banner {
-    width: 200%;
-    left: -50%;
+    width: 100%;
     color: white;
     text-align: center;
     background-color: #42c096;
@@ -126,7 +126,7 @@ body {
   overflow: hidden; }
 
 #exp_svg {
-  width: 380px;
+  width: 340px;
   display: block;
   margin: 0px auto; }
 

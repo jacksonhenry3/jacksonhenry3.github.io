@@ -3,6 +3,7 @@
   display: block;
   margin: 0px auto;
   text-align: center;
+  overflow: hidden;
   // background: red;
   img {
     border-radius: 500px;
@@ -10,11 +11,11 @@
     margin:        0px auto;
     width:         80%;
     max-width:     300px;
+    
   }
   #banner
   {
-    width:200%;
-    left:-50%;
+    width:100%;
     color: white;
     text-align: center;
     background-color: $colorPrimary;

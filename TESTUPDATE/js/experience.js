@@ -1,4 +1,4 @@
-svgWidth = Math.min(380,document.body.offsetWidth)
+svgWidth = 340
 svgHeight = 1300;
 center = 50
 
