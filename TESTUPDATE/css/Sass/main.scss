@@ -1,6 +1,8 @@
 $colorPrimary: rgb(66,192,150);
 $colorSecondary: #D55282;
 $opacity: .8;
+$transition-time:.6s;
+$timing-function: cubic-bezier(0.720, -0.010, 0.570, 1.105);
 
 @import 'button';
 @import 'skills';
@@ -9,8 +11,11 @@ $opacity: .8;
 
 html
 {
-    max-width: 100%;
+    position: relative;
+    left: 0px;
     overflow-x: hidden;
+    transition:left $transition-time;
+    transition-timing-function:$timing-function
 }
 
 body
@@ -22,7 +27,6 @@ body
 
 .container-fluid
 {
-  padding:0px;
   padding-top:25px;
 }
 
@@ -41,6 +45,9 @@ body
 .noscroll
 {
   overflow: hidden;
+  left:-100%;
+  transition:left $transition-time;
+  transition-timing-function:$timing-function
 }
 
 #exp_svg
@@ -71,9 +78,5 @@ body
     svg
     {
         margin-left: 140px;
-    }
-    .container-fluid
-    {
-        padding:25px;
     }
 }
