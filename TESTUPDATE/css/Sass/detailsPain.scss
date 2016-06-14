@@ -7,7 +7,7 @@
   left:100%;
   background: $colorPrimary;
   // opacity: 0;
-  transition:left .5s, opacity .5s;
+  transition:left $transition-time, opacity $transition-time;
   transition-timing-function:$timing-function
 }
 

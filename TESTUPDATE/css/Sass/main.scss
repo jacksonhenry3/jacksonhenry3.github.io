@@ -1,8 +1,8 @@
 $colorPrimary: rgb(66,192,150);
 $colorSecondary: #D55282;
 $opacity: .8;
-$transition-time:.6s;
-$timing-function: cubic-bezier(0.720, -0.010, 0.570, 1.105);
+$transition-time:1s;
+$timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
 
 @import 'button';
 @import 'skills';
@@ -56,6 +56,19 @@ body
   display: block;
   margin:0px auto;
 }
+
+#background_svg
+{
+  background:rgb(250,250,250);
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+  margin: 0px;
+}
+
+.link {stroke: rgba(50,50,50,.1);}
+.node {stroke: white; stroke-width:2px;fill:$colorPrimary;opacity:.2;}
 
 .centeringParent {
   position: relative;

@@ -1,3 +1,4 @@
+/* easeInOutExpo */
 .navigationButton {
   display: block;
   width: 80%;
@@ -51,7 +52,7 @@ button:hover::after {
   margin: 0px; }
 
 .experienceBar {
-  transition: transform .8s;
+  transition: transform 1s;
   transform: translate(100px, 100px) rotate(0deg); }
 
 .skill:hover .experienceBar {
@@ -64,8 +65,8 @@ button:hover::after {
   top: 0;
   left: 100%;
   background: #42c096;
-  transition: left .5s, opacity .5s;
-  transition-timing-function: cubic-bezier(0.72, -0.01, 0.57, 1.105); }
+  transition: left 1s, opacity 1s;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1); }
 
 .shown {
   opacity: 1;
@@ -108,8 +109,8 @@ html {
   position: relative;
   left: 0px;
   overflow-x: hidden;
-  transition: left 0.6s;
-  transition-timing-function: cubic-bezier(0.72, -0.01, 0.57, 1.105); }
+  transition: left 1s;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1); }
 
 body {
   margin-bottom: 45px;
@@ -130,13 +131,30 @@ body {
 .noscroll {
   overflow: hidden;
   left: -100%;
-  transition: left 0.6s;
-  transition-timing-function: cubic-bezier(0.72, -0.01, 0.57, 1.105); }
+  transition: left 1s;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1); }
 
 #exp_svg {
   width: 340px;
   display: block;
   margin: 0px auto; }
+
+#background_svg {
+  background: #fafafa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin: 0px; }
+
+.link {
+  stroke: rgba(50, 50, 50, 0.1); }
+
+.node {
+  stroke: white;
+  stroke-width: 2px;
+  fill: #42c096;
+  opacity: .2; }
 
 .centeringParent {
   position: relative;

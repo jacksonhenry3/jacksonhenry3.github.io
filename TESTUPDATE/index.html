@@ -16,6 +16,8 @@
         <!-- my styles -->
         <link href="css/Sass/main.css" rel="stylesheet">
 
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
         <!-- Old browser support -->
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -26,7 +28,7 @@
         <![endif]-->
     </head>
     <body>
-        <div class="container-fluid scroll-div">
+        <div class="container-fluid">
             <div class="row">
                 <div class="image">
                     <img src="media/me.jpg">
@@ -36,16 +38,22 @@
                     </div>
                     <h3>A Passionate Physicist and Programmer</h3>
                 </div>
-            </div>
+            </div> 
             <div class="row navigationContainer">
                 <div class="col-sm-4">
-                    <button type="button" class="navigationButton">Portfolio</button>
+                    <button type="button" class="navigationButton page-scroll"  href="#portfolio">
+                        Portfolio
+                    </button>
                 </div>
                 <div class="col-sm-4">
-                    <button type="button" class="navigationButton">Skills</button>
+                    <button type="button" class="navigationButton page-scroll" href="#computerSkillContainer">
+                        Skills
+                    </button>
                 </div>
                 <div class="col-sm-4">
-                    <button type="button" class="navigationButton">Employment</button>
+                    <button type="button" class="navigationButton page-scroll" href="#exp_svg">
+                        Employment
+                    </button>
                 </div>
             </div>
             <div class = 'row' id = 'exp_svg'>
@@ -74,6 +82,10 @@
     <!-- jquerry -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+    <!-- jquerry UI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
     <!-- bootstrap javascript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -82,4 +94,10 @@
 
     <!-- create and manages the skill circles -->
     <script src="js/skills.js"></script>
+
+    <!-- generates the background -->
+    <script src="js/background.js"></script>
+
+    <!-- smooth nice scrolling -->
+    <script src="js/scroll.js"></script>
 </html>

@@ -13,11 +13,11 @@
 
 .experienceBar
 {
-    transition : transform .8s;
-    transform  : translate(100px, 100px) rotate(0deg)
+    transition : transform $transition-time;
+    transform  : translate(100px, 100px) rotate(0deg);
 }
 
 .skill:hover .experienceBar
 {
-    transform : translate(100px, 100px) rotate(360deg)
+    transform : translate(100px, 100px) rotate(360deg);
 }
