@@ -129,7 +129,6 @@ body {
   max-width: 1366px; }
 
 .noscroll {
-  overflow: hidden;
   left: -100%;
   transition: left 1s;
   transition-timing-function: cubic-bezier(1, 0, 0, 1); }

@@ -247,11 +247,11 @@ svg.selectAll("circle")
 		})
 	.on("click", function(d){showDesc(d.name,d.content)});
 
-$("#close").click(function(){$("html").toggleClass('noscroll');$('.description').toggleClass('shown')})
+$("#close").click(function(){$("html").toggleClass('c');$('.description').toggleClass('shown')})
 
 function showDesc(name,text)
 {
-	$("html").toggleClass('noscroll');
+	$("html").toggleClass('c');
 
 	desc = $('.description')
 	desc.toggleClass('shown')

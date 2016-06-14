@@ -44,7 +44,7 @@ body
 
 .noscroll
 {
-  overflow: hidden;
+  // overflow: hidden;
   left:-100%;
   transition:left $transition-time;
   transition-timing-function:$timing-function
