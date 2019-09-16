@@ -126,7 +126,8 @@ button:hover::after {
 .unfocussed {
   width: 10%; }
   .unfocussed img {
-    left: -135%; }
+    width: 1000%;
+    left: -450%; }
 
 .focussed {
   width: 80%; }
