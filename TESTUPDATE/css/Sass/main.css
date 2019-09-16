@@ -138,7 +138,17 @@ button:hover::after {
 @media screen and (max-width: 992px) {
   .showcase img {
     left: 0%;
-    width: 100%; } }
+    width: 100%; }
+  .showcase .neutral {
+    width: 100%; }
+  .showcase .unfocussed {
+    width: 100%; }
+    .showcase .unfocussed img {
+      width: 100%; }
+  .showcase .focussed {
+    width: 100%; }
+    .showcase .focussed img {
+      width: 100%; } }
 html {
   position: relative;
   left: 0px;
