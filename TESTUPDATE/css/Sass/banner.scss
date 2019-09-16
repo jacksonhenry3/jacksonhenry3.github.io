@@ -10,7 +10,7 @@
     display:       block;
     margin:        0px auto;
     width:         80%;
-    max-width:     300px;
+    max-width:     400px;
     
   }
   #banner
@@ -19,13 +19,13 @@
     color: white;
     text-align: center;
     background-color: $colorPrimary;
-    position: absolute;
+    margin-top:1em;
     bottom:5em;
     padding:5px;
   }
   h1 {
-    
-    line-height: .5em;
+    font-size: 4em;
+    // line-height: .5em;
     padding: 0.2em;
     margin: 0px;
   }

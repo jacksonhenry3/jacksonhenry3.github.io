@@ -1,21 +1,24 @@
 $colorPrimary: rgb(66,192,150);
-$colorSecondary: #D55282;
+$colorPrimary: rgb(66,150,192);
+// $colorSecondary: #D85282;
+$colorSecondary: rgba(0,0,0,.2);
 $opacity: .8;
-$transition-time:1s;
-$timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */
+$transition-time:.6s;
+$timing-function: cubic-bezier(.8000, 0.000, 0.000, 1.000); /* easeInOutExpo */
 
 @import 'button';
 @import 'skills';
 @import 'detailsPain';
 @import 'banner';
+@import 'showcase';
 
 html
 {
     position: relative;
     left: 0px;
     overflow-x: hidden;
-    transition:left $transition-time;
-    transition-timing-function:$timing-function
+    // transition:left $transition-time;
+    // transition-timing-function:$timing-function
 }
 
 body
@@ -23,6 +26,7 @@ body
     margin-bottom: 45px;
     margin-bottom: 45px;
     font-family: 'Roboto Slab', serif;
+    background: rgb(252,252,252);
 }
 
 .container-fluid
@@ -86,10 +90,10 @@ body
 }
 
 
-@media screen and (min-width: 480px)
+@media screen and (min-width: 530px)
 {
     svg
     {
-        margin-left: 140px;
+        margin-left: 125px;
     }
 }
