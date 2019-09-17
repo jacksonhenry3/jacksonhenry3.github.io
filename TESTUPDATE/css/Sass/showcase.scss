@@ -1,54 +1,135 @@
-.showcase
+
+
+#PhysicsTitle
 {
-    background: red;
+     background-image: url("../../media/DetectionGeometryTop.jpg");
+}
+#ProgrammingTitle
+{
+     background-image: url("../../media/codeScreenShot.png");
+}
+#PhotographyTitle
+{
+    background-image: url("../../media/dried.jpg");
+}
+.title
+{
+    height:15vw;
+    text-align: center;
+    
+    position:relative;
+    background-position: 50% 50%;
+
+    margin:1vw;
+     h1
+     {
+        width: 102%;
+        height:102%;
+        top: 50%;
+        left: 50%;
+        margin:0px;
+        transform: translate(-50%, -50%);
+
+
+        font-weight: 700;
+        background-color: rgb(250,250,250);
+        color: black;
+        font-size: 12vw;
+
+        text-align: center;
+        position: absolute;
+
+        mix-blend-mode: screen;
+     }
+}
+
+    .showcase
+{
+    // background: red;
     max-width:  1500px;
     margin:10px auto;
     margin-top:50px;
-    // overflow:hidden;
+    margin-bottom:200px;
+    box-shadow: 0px 0px 25px 0px rgba(50,50,50,.5);
+
 
     .item
     {
 
-        transition: all .2s;
+        transition: all $transition-time/3;
         padding:0px;
         overflow: hidden;
+        border:8px solid white;
 
 
     }
     img
     {
-        transition: all .2s;
-        width:300%;
+
+        transition: all $transition-time/3;
+        width:100vw;
+        max-width:1500px;
         position: relative;
-        left:-100%;
+        left:-33.333vw;
+
     }
 }
 
-        .neutral
-        {
-            width:33.3333333%;
-        }
-        .unfocussed
-        {
-            width:10%;
-             img 
-            {
-                width:1000%;
-                left:-450%;
-            }
-        }
 
-        .focussed
+
+.showcase:hover .item
+{
+    width:10%;
+    img
+    {
+        left:-45vw;
+    }
+}
+
+.showcase{
+    .item:hover
+    {
+        width:80%;
+        img
+        {
+            left:-10vw;
+        }
+    }
+}
+
+@media screen and (min-width: 1520px)
+{
+    .showcase:hover .item
+    {
+        width:10%;
+        img
+        {
+            left:-675px;
+        }
+    }
+
+    .showcase{
+        .item:hover
         {
             width:80%;
-            img 
+            img
             {
-                width:125%;
-                left:-10%;
+                left:-150px;
             }
         }
-
-
+    }
+    .showcase
+    {
+        .item
+        {
+            img 
+            {
+                left:-500px;
+            }
+        }
+    }
+   
+}
 
 @media screen and (max-width: 992px)
 {
