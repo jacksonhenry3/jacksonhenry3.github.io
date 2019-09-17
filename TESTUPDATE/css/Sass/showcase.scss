@@ -14,13 +14,14 @@
 }
 .title
 {
-    height:15vw;
+    height:12vw;
     text-align: center;
     
     position:relative;
     background-position: 50% 50%;
 
     margin:1vw;
+    margin-bottom:5vw;
      h1
      {
         width: 102%;
@@ -48,7 +49,7 @@
     // background: red;
     max-width:  1500px;
     margin:10px auto;
-    margin-top:50px;
+    // margin-top:50px;
     margin-bottom:200px;
     box-shadow: 0px 0px 25px 0px rgba(50,50,50,.5);
 
@@ -133,37 +134,38 @@
 
 @media screen and (max-width: 992px)
 {
+    .showcase:hover .item
+    {
+        width:100%;
+        img
+        {
+             width:100%;
+            left:0px;
+        }
+    }
+
+    .showcase{
+        .item:hover
+        {
+            width:100%;
+        img
+        {
+            width:100%;
+            left:0px;
+        }
+        }
+    }
     .showcase
     {
-    .item
-    {
-    }
-    img
-    {
-        left:0%;
-        width:100%;
-    }
-
-            .neutral
+        .item
         {
             width:100%;
-        }
-        .unfocussed
-        {
-           width:100%;
-             img 
-            {
-                width:100%;
-            }
-        }
-
-        .focussed
+        img
         {
             width:100%;
-            img 
-            {
-                width:100%;
-            }
+            left:0px;
         }
-}
+        }
+    }
+   
 }

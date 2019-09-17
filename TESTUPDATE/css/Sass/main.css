@@ -113,11 +113,12 @@ button:hover::after {
   background-image: url("../../media/dried.jpg"); }
 
 .title {
-  height: 15vw;
+  height: 12vw;
   text-align: center;
   position: relative;
   background-position: 50% 50%;
-  margin: 1vw; }
+  margin: 1vw;
+  margin-bottom: 5vw; }
   .title h1 {
     width: 102%;
     height: 102%;
@@ -136,7 +137,6 @@ button:hover::after {
 .showcase {
   max-width: 1500px;
   margin: 10px auto;
-  margin-top: 50px;
   margin-bottom: 200px;
   box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.5); }
   .showcase .item {
@@ -175,19 +175,23 @@ button:hover::after {
   .showcase .item img {
     left: -500px; } }
 @media screen and (max-width: 992px) {
-  .showcase img {
-    left: 0%;
+  .showcase:hover .item {
     width: 100%; }
-  .showcase .neutral {
+    .showcase:hover .item img {
+      width: 100%;
+      left: 0px; }
+
+  .showcase .item:hover {
     width: 100%; }
-  .showcase .unfocussed {
+    .showcase .item:hover img {
+      width: 100%;
+      left: 0px; }
+
+  .showcase .item {
     width: 100%; }
-    .showcase .unfocussed img {
-      width: 100%; }
-  .showcase .focussed {
-    width: 100%; }
-    .showcase .focussed img {
-      width: 100%; } }
+    .showcase .item img {
+      width: 100%;
+      left: 0px; } }
 html {
   position: relative;
   left: 0px;
